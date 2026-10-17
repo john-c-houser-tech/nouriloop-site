@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NouriLoop LLC — Practical AI help for organizations</title>
+<meta name="description" content="AI training, adoption standards, and software development for public agencies and small businesses in Astoria, Clatsop County, and the Pacific Northwest.">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --surface: #f1efe8;
+    --text: #1e2420;
+    --muted: #4f5a53;
+    --accent: #2f6b4f;
+    --accent-text: #ffffff;
+    --rule: #d9d5ca;
+    --measure: 40rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #151916;
+      --surface: #1e2420;
+      --text: #e9ece8;
+      --muted: #aab4ad;
+      --accent: #7cc3a0;
+      --accent-text: #0f1a14;
+      --rule: #333b36;
+    }
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 1.0625rem/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  .wrap { max-width: var(--measure); margin: 0 auto; padding: 0 1rem; }
+  .skip {
+    position: absolute; left: -999px; top: 0;
+    background: var(--accent); color: var(--accent-text); padding: .5rem 1rem;
+  }
+  .skip:focus { left: 1rem; }
+  a { color: var(--accent); text-underline-offset: .15em; }
+  a:focus-visible, .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  h1, h2, h3 { line-height: 1.25; margin: 0 0 .5rem; }
+  h1 { font-size: 1rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  h2 { font-size: 1.5rem; margin-top: 0; }
+  h3 { font-size: 1.125rem; margin-top: 1.5rem; }
+  p { margin: 0 0 1rem; }
+
+  header { padding: 4rem 0 3rem; border-bottom: 1px solid var(--rule); }
+  .lead { font-size: clamp(1.75rem, 5vw, 2.5rem); line-height: 1.2; font-weight: 700; margin: 0 0 1rem; }
+  .sub { color: var(--muted); font-size: 1.125rem; }
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+  .btn {
+    display: inline-block; padding: .65rem 1.1rem; border-radius: .4rem;
+    text-decoration: none; font-weight: 600; border: 2px solid var(--accent);
+  }
+  .btn-primary { background: var(--accent); color: var(--accent-text); }
+  .btn-secondary { color: var(--accent); }
+
+  section { padding: 3rem 0; border-bottom: 1px solid var(--rule); }
+  section:last-of-type { border-bottom: 0; }
+  .item { margin-bottom: 1.5rem; }
+  .item:last-child { margin-bottom: 0; }
+  .item strong { display: block; }
+  .note { color: var(--muted); font-style: italic; }
+  .name-note { background: var(--surface); padding: 1rem 1.25rem; border-radius: .4rem; }
+
+  footer { padding: 2rem 0 3rem; color: var(--muted); font-size: .9375rem; border-top: 1px solid var(--rule); }
+  footer p { margin: 0 0 .5rem; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap">
+    <h1>NouriLoop LLC</h1>
+    <p class="lead">Practical AI help for organizations that have to get it right.</p>
+    <p class="sub">Training, adoption standards, and software development for public agencies and
+      small businesses in Astoria, Clatsop County, and the Pacific Northwest. Built by someone who
+      has shipped production software with AI coding agents inside a county IT department — and
+      knows what works and what doesn't.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="mailto:john@nouriloop.com?subject=A%20conversation%20about%20AI">Book a conversation</a>
+      <a class="btn btn-secondary" href="#training">See the training</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section id="services" aria-labelledby="services-h">
+    <div class="wrap">
+      <h2 id="services-h">What we do</h2>
+
+      <h3>Help your staff use AI tools well</h3>
+      <p>Most organizations don't have an adoption problem; they have an expectations problem.
+        Nobody is sure what's allowed, what "done" means, or who's accountable. We fix that with a
+        short session for mixed audiences and a one-page standard — tuned to your needs — your
+        team can adopt the same week.</p>
+
+      <h3>Give your developers gates, not guesswork</h3>
+      <p>AI coding agents produce more code than any person can review. The answer is a written
+        process — plan approval, tests shown, a second review, a human at the merge — and skills
+        that travel between projects. We bring a starter kit and leave your team running it.</p>
+
+      <h3>Retire the technical debt you've been living with</h3>
+      <p>Old applications, undocumented scripts, the system only one person understands. We
+        rebuild and document them with AI-assisted development, under your review, on your
+        repositories, at a pace that was not possible two years ago.</p>
+    </div>
+  </section>
+
+  <section id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <h2 id="work-h">Work</h2>
+
+      <div class="item">
+        <p><strong>NouriLoop</strong>
+          A production nutrition-tracking web app (Symfony, MariaDB, Stripe, Claude vision), open
+          source under AGPL, self-hostable. Built and operated solo.
+          <a href="https://github.com/john-c-houser-tech/nouriloop-app">Source on GitHub</a></p>
+      </div>
+
+      <div class="item">
+        <p><strong>Cranky Coop · Quiet Solitaire</strong>
+          Two browser games, each a single file, each with a build, a linter, and a review
+          process. Range and polish.
+          Source: <a href="https://github.com/john-c-houser-tech/cranky-coop">Cranky Coop</a> ·
+          <a href="https://github.com/john-c-houser-tech/solitaire">Quiet Solitaire</a></p>
+      </div>
+
+      <div class="item">
+        <p><strong>County applications</strong>
+          More than ten applications built or refactored in the past year for a county IT
+          department as a one-person team, including a Python rewrite of an open-source library
+          integration.</p>
+      </div>
+
+      <div class="item">
+        <p><strong>Library software</strong>
+          Open-source integration tools written for public libraries and in production use at
+          library systems in Multnomah and Clackamas Counties.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="training" aria-labelledby="training-h">
+    <div class="wrap">
+      <h2 id="training-h">Training</h2>
+
+      <div class="item">
+        <p><strong>Working with AI Tools: What to Expect, What to Require</strong>
+          50 minutes, any audience. What these tools are and aren't, why they fail, how to make
+          failures rare and harmless, and the three rules that make AI use safe in a public
+          organization. Leaves you with a one-page AI Use Standard and a Quality Procedures
+          checklist.</p>
+      </div>
+
+      <div class="item">
+        <p><strong>Coding with Agents Without Losing Control</strong>
+          One day or two half-days, for developers and the people who review their work. Context,
+          repository instructions, skills, process rules, and review gates. Leaves you with a
+          starter skill library and an instructions-file template, installed in your own
+          repository before you go home.</p>
+      </div>
+
+      <p>Both sessions align with your existing policies rather than replacing them. If anyone on
+        your team needs materials in a different format, captioning, or other support to take
+        part, ask — it's provided at no cost.</p>
+    </div>
+  </section>
+
+  <section id="about" aria-labelledby="about-h">
+    <div class="wrap">
+      <h2 id="about-h">About</h2>
+      <p>John Houser has spent 37 years in library and public-sector systems: systems
+        administration, integration, and development. Open-source software he wrote is still in
+        use at Oregon library systems. Most recently he has been a senior systems administrator
+        in county IT. In the last year he has used AI coding agents to ship a production web
+        application, two games, and more than ten internal tools, and has written the process
+        rules that made that possible without losing control. NouriLoop LLC is based in Astoria,
+        Oregon.</p>
+      <p class="name-note"><em>The name:</em> you can nourish an organization the way you nourish
+        a person — steadily, with the right inputs, and with attention to what's actually
+        working.</p>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <h2 id="contact-h">Contact</h2>
+      <p><a href="mailto:john@nouriloop.com">john@nouriloop.com</a> ·
+        <a href="tel:+15415598353">(541) 559-8353</a> · Astoria, Oregon</p>
+      <p>Serving Clatsop County and the Pacific Northwest. We travel within the region; closer is
+        better.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>NouriLoop LLC is an equal opportunity business.</p>
+    <p>The NouriLoop app: <a href="https://nouriloop.com">nouriloop.com</a></p>
+  </div>
+</footer>
+</body>
+</html>
