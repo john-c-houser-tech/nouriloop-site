@@ -68,6 +68,19 @@
   .note { color: var(--muted); font-style: italic; }
   .name-note { background: var(--surface); padding: 1rem 1.25rem; border-radius: .4rem; }
 
+  form { margin: 1.5rem 0 2rem; }
+  label { display: block; font-weight: 600; margin: 0 0 .25rem; }
+  .optional { font-weight: 400; color: var(--muted); }
+  input, textarea {
+    display: block; width: 100%; margin: 0 0 1rem; padding: .6rem .7rem;
+    font: inherit; color: var(--text); background: var(--bg);
+    border: 1px solid var(--muted); border-radius: .4rem;
+  }
+  textarea { min-height: 9rem; resize: vertical; }
+  input:focus-visible, textarea:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; }
+  button.btn { font: inherit; font-weight: 600; cursor: pointer; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
   footer { padding: 2rem 0 3rem; color: var(--muted); font-size: .9375rem; border-top: 1px solid var(--rule); }
   footer p { margin: 0 0 .5rem; }
 </style>
@@ -84,7 +97,7 @@
       has shipped production software with AI coding agents inside the Multnomah County IT Division — and
       knows what works and what doesn't.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="mailto:john@nouriloop.com?subject=A%20conversation%20about%20AI">Book a conversation</a>
+      <a class="btn btn-primary" href="#contact">Book a conversation</a>
       <a class="btn btn-secondary" href="#training">See the training</a>
     </div>
   </div>
@@ -191,7 +204,22 @@
   <section id="contact" aria-labelledby="contact-h">
     <div class="wrap">
       <h2 id="contact-h">Contact</h2>
-      <p><a href="mailto:john@nouriloop.com">john@nouriloop.com</a> ·
+      <p>Tell us a little about your organization and what you'd like to talk about. We'll reply by
+        email to set up a time.</p>
+      <form method="post" action="https://app.nouriloop.com/site-contact">
+        <label for="c-name">Name <span class="optional">(optional)</span></label>
+        <input id="c-name" name="name" type="text" maxlength="200" autocomplete="name">
+        <label for="c-email">Email</label>
+        <input id="c-email" name="email" type="email" maxlength="180" autocomplete="email" required>
+        <label for="c-message">What would you like to talk about?</label>
+        <textarea id="c-message" name="message" maxlength="5000" required></textarea>
+        <div class="hp" aria-hidden="true">
+          <label for="c-website">Leave this field empty</label>
+          <input id="c-website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <button class="btn btn-primary" type="submit">Send</button>
+      </form>
+      <p>Or reach us directly: <a href="mailto:info@nouriloop.com">info@nouriloop.com</a> ·
         <a href="tel:+15415598353">(541) 559-8353</a> · Astoria, Oregon</p>
       <p>Serving Clatsop County and the Pacific Northwest. We travel within the region; closer is
         better.</p>
@@ -202,7 +230,7 @@
 <footer>
   <div class="wrap">
     <p>NouriLoop LLC is an equal opportunity business.</p>
-    <p>The NouriLoop app: <a href="https://nouriloop.com">nouriloop.com</a></p>
+    <p>The NouriLoop app: <a href="https://app.nouriloop.com">app.nouriloop.com</a></p>
   </div>
 </footer>
 </body>
