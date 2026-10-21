@@ -83,6 +83,13 @@
 
   footer { padding: 2rem 0 3rem; color: var(--muted); font-size: .9375rem; border-top: 1px solid var(--rule); }
   footer p { margin: 0 0 .5rem; }
+  /* Links spelled out as visible URLs, so a printout or screenshot still carries them. */
+  .links { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .25rem 1rem; margin: 0 0 1.25rem; }
+  .links dd { margin: 0; overflow-wrap: anywhere; }
+  @media (max-width: 30rem) {
+    .links { grid-template-columns: 1fr; gap: 0; }
+    .links dd { margin-bottom: .5rem; }
+  }
 </style>
 </head>
 <body>
@@ -229,8 +236,21 @@
 
 <footer>
   <div class="wrap">
+    <dl class="links">
+      <dt>NouriLoop LLC</dt>
+      <dd><a href="https://nouriloop.com/">nouriloop.com</a></dd>
+      <dt>The NouriLoop app</dt>
+      <dd><a href="https://app.nouriloop.com/">app.nouriloop.com</a></dd>
+      <dt>Cranky Coop</dt>
+      <dd><a href="https://games.nouriloop.com/cranky-coop/">games.nouriloop.com/cranky-coop</a></dd>
+      <dt>Quiet Solitaire</dt>
+      <dd><a href="https://games.nouriloop.com/solitaire/">games.nouriloop.com/solitaire</a></dd>
+      <dt>GitHub</dt>
+      <dd><a href="https://github.com/john-c-houser-tech">github.com/john-c-houser-tech</a></dd>
+      <dt>LinkedIn</dt>
+      <dd><a href="https://www.linkedin.com/in/john-c-houser-a1a1761/">linkedin.com/in/john-c-houser-a1a1761</a></dd>
+    </dl>
     <p>NouriLoop LLC is an equal opportunity business.</p>
-    <p>The NouriLoop app: <a href="https://app.nouriloop.com">app.nouriloop.com</a></p>
   </div>
 </footer>
 </body>
