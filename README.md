@@ -9,6 +9,11 @@ Six pages, one folder each: `index.html` (Home), `services/`, `work/`, `training
 `/site.css` and repeats the same site bar and footer, so a change to either goes into every
 page, including `contact/thanks/` and `contact/problem/`. `john-houser.jpg` is the About photo.
 
+The five service icons are maritime line drawings (lighthouse, compass, ship's wheel, anchor,
+channel buoy). They're inlined as SVG in `services/index.html` and `index.html` so they take the
+accent color and follow dark mode; `icons/` holds the source of each. Edit the source, then paste
+its paths into both pages.
+
 The contact form posts to `https://app.nouriloop.com/site-contact` on the NouriLoop app,
 which emails it to info@nouriloop.com and redirects back to `contact/thanks/` or
 `contact/problem/` here (app side: `.claude/rules/registration.md` ▸ Business-site contact
