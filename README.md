@@ -14,6 +14,11 @@ original (Looking East and Hotel Pier use the full 3:2 frame), shown whole at ev
 as WebP with JPEG fallback, metadata stripped. To change one, re-crop the original at 2:1, export
 all six files with the same names, and keep the alt text and caption in step.
 
+NouriLoop screenshots (`screens/`) come from a local copy of the app with the made-up demo
+user (DemoDataSeeder's "Alex Rivera"), John's own meal photos with location data stripped, real
+AI analysis and synthetic glucose — never production. Each links to its 1600 px version so it can
+be read on a phone.
+
 The five service icons are maritime line drawings (lighthouse, compass, ship's wheel, anchor,
 channel buoy). They're inlined as SVG in `services/index.html` and `index.html` so they take the
 accent color and follow dark mode; `icons/` holds the source of each. Edit the source, then paste

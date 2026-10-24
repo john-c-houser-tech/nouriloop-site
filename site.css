@@ -84,6 +84,11 @@ section:last-of-type { border-bottom: 0; }
 .icon-list { list-style: none; padding: 0; }
 .icon-list li { display: flex; gap: .75rem; align-items: flex-start; margin-bottom: .75rem; }
 .icon-list .icon { margin-top: .1rem; }
+/* App screenshots inside a page (NouriLoop). */
+.shot { margin: 1.5rem 0; }
+.shot img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: .4rem; }
+.shot a { display: block; }
+.shot figcaption { color: var(--muted); font-size: .875rem; padding-top: .4rem; }
 .keep { background: var(--surface); padding: .75rem 1rem; border-radius: .4rem; }
 .note { color: var(--muted); font-style: italic; }
 .name-note { background: var(--surface); padding: 1rem 1.25rem; border-radius: .4rem; }
