@@ -58,9 +58,9 @@ li { margin-bottom: .4rem; }
 
 /* Photo banner: one of John's photographs at the top of each page, a hand-chosen 2:1 crop
    always shown whole (never cropped further by CSS). */
-.banner { max-width: 64rem; margin: 0 auto; }
-.banner img { display: block; width: 100%; height: auto; }
-.banner figcaption { color: var(--muted); font-size: .8125rem; padding-top: .4rem; padding-bottom: .4rem; }
+.banner { max-width: var(--measure); margin: 0 auto; padding: 1.5rem 1rem 0; }
+.banner img { display: block; width: 100%; height: auto; border-radius: .4rem; }
+.banner figcaption { color: var(--muted); font-size: .8125rem; padding: .4rem 0 0; }
 .banner figcaption a { color: inherit; }
 
 /* Page header: the hero on Home, the page title elsewhere. */
