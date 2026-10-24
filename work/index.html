@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work — NouriLoop LLC</title>
+<meta name="description" content="AI training, adoption standards, and software development for public agencies and small businesses in Astoria, Clatsop County, and the Pacific Northwest.">
+<link rel="stylesheet" href="/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-bar">
+  <div class="wrap">
+    <a class="brand" href="/">NouriLoop LLC</a>
+    <nav class="site-nav" aria-label="Site">
+      <ul>
+      <li><a href="/services/">Services</a></li>
+      <li><a href="/work/" aria-current="page">Work</a></li>
+      <li><a href="/training/">Training</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="page-head">
+  <div class="wrap">
+    <h1>Work</h1>
+    <p class="sub">Everything here is public. You can try it, read the source, and see how it was built.</p>
+  </div>
+</div>
+
+<section aria-labelledby="nl-h">
+  <div class="wrap">
+    <h2 id="nl-h">NouriLoop</h2>
+    <p>A nutrition-tracking web app with AI built in from the ground up. It's live at
+      app.nouriloop.com, open source under AGPL, and anyone can run their own copy with Docker in
+      about an hour.</p>
+    <ul>
+      <li><strong>What it does:</strong> logs meals, recipes and supplement labels from a photo;
+        shows how each meal moved your glucose, using a continuous glucose monitor; turns a goal
+        described in plain words into a measurable one, with check-ins in the app, by email or by
+        text; works in six languages.</li>
+      <li><strong>What it's built on:</strong> Symfony and PHP, MariaDB, Stripe and Twilio. The AI
+        provider can be swapped between Anthropic, OpenRouter and Ollama, and every AI call is
+        metered.</li>
+      <li><strong>How it was built:</strong> mostly with AI coding agents, with John planning,
+        directing and reviewing every step. Since June 2026 that's more than 250 pull requests,
+        each one reviewed before it was merged, and more than 180 test files that run on every
+        change.</li>
+      <li><strong>How it runs:</strong> in production, operated by one person, with uptime
+        monitoring, encrypted nightly backups kept offsite, and automatic security updates.</li>
+    </ul>
+    <p><a href="https://app.nouriloop.com/">Try it</a> · <a href="https://github.com/john-c-houser-tech/nouriloop-app">Source on GitHub</a></p>
+  </div>
+</section>
+
+<section aria-labelledby="cc-h">
+  <div class="wrap">
+    <h2 id="cc-h">Cranky Coop</h2>
+    <p>A physics slingshot game: the raccoons ate the eggs, and the hens take it personally. Six
+      levels, hand-drawn canvas art, sound synthesized in the browser, all in one HTML file. MIT
+      license.</p>
+    <p><a href="https://games.nouriloop.com/cranky-coop/">Play</a> · <a href="https://github.com/john-c-houser-tech/cranky-coop">Source</a></p>
+
+    <h2 id="qs-h">Quiet Solitaire</h2>
+    <p>Klondike, Spider and FreeCell in one HTML file, with no ads, no accounts and no purchases.
+      Play with a mouse or entirely from the keyboard, with three hand-drawn decks. MIT
+      license.</p>
+    <p><a href="https://games.nouriloop.com/solitaire/">Play</a> · <a href="https://github.com/john-c-houser-tech/solitaire">Source</a></p>
+
+    <p class="note">Small projects get the same care as large ones: a build check and a review
+      before every merge.</p>
+  </div>
+</section>
+
+<section aria-labelledby="lib-h">
+  <div class="wrap">
+    <h2 id="lib-h">Library software</h2>
+    <p>Open-source tools for libraries that run the SirsiDynix Symphony library system. Both are
+      released under the GPL and are in production at Oregon library systems.</p>
+    <ul>
+      <li><strong>libilsws:</strong> a PHP package for Symphony's Web Services API. Other library
+        tools are built on it.</li>
+      <li><strong>ReLibConnectEd:</strong> an automated pipeline that loads student records from
+        school districts into the library system, so students get library accounts through their
+        schools. It validates the data, standardizes addresses to USPS format, skips records that
+        haven't changed, and emails each district a report after every run.</li>
+    </ul>
+    <p>A Python rewrite of ReLibConnectEd is in user acceptance testing and will be released as
+      open source when it's finished.</p>
+    <p><a href="https://github.com/multnomah-county-it/libilsws">libilsws source</a> ·
+      <a href="https://github.com/multnomah-county-it/librelibconnected">ReLibConnectEd source</a></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <dl class="links">
+      <dt>NouriLoop LLC</dt>
+      <dd><a href="https://nouriloop.com/">nouriloop.com</a></dd>
+      <dt>The NouriLoop app</dt>
+      <dd><a href="https://app.nouriloop.com/">app.nouriloop.com</a></dd>
+      <dt>Cranky Coop</dt>
+      <dd><a href="https://games.nouriloop.com/cranky-coop/">games.nouriloop.com/cranky-coop</a></dd>
+      <dt>Quiet Solitaire</dt>
+      <dd><a href="https://games.nouriloop.com/solitaire/">games.nouriloop.com/solitaire</a></dd>
+      <dt>GitHub</dt>
+      <dd><a href="https://github.com/john-c-houser-tech">github.com/john-c-houser-tech</a></dd>
+      <dt>LinkedIn</dt>
+      <dd><a href="https://www.linkedin.com/in/john-c-houser-a1a1761/">linkedin.com/in/john-c-houser-a1a1761</a></dd>
+    </dl>
+    <p>NouriLoop LLC is an equal opportunity business.
+      <a href="/equal-opportunity/">Read our policy</a>.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -5,100 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NouriLoop LLC — Practical AI help for organizations</title>
 <meta name="description" content="AI training, adoption standards, and software development for public agencies and small businesses in Astoria, Clatsop County, and the Pacific Northwest.">
-<style>
-  :root {
-    --bg: #fbfaf7;
-    --surface: #f1efe8;
-    --text: #1e2420;
-    --muted: #4f5a53;
-    --accent: #2f6b4f;
-    --accent-text: #ffffff;
-    --rule: #d9d5ca;
-    --measure: 40rem;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #151916;
-      --surface: #1e2420;
-      --text: #e9ece8;
-      --muted: #aab4ad;
-      --accent: #7cc3a0;
-      --accent-text: #0f1a14;
-      --rule: #333b36;
-    }
-  }
-  *, *::before, *::after { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font: 1.0625rem/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  }
-  .wrap { max-width: var(--measure); margin: 0 auto; padding: 0 1rem; }
-  .skip {
-    position: absolute; left: -999px; top: 0;
-    background: var(--accent); color: var(--accent-text); padding: .5rem 1rem;
-  }
-  .skip:focus { left: 1rem; }
-  a { color: var(--accent); text-underline-offset: .15em; }
-  a:focus-visible, .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-  h1, h2, h3 { line-height: 1.25; margin: 0 0 .5rem; }
-  h1 { font-size: 1rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
-  h2 { font-size: 1.5rem; margin-top: 0; }
-  h3 { font-size: 1.125rem; margin-top: 1.5rem; }
-  p { margin: 0 0 1rem; }
-
-  header { padding: 4rem 0 3rem; border-bottom: 1px solid var(--rule); }
-  .lead { font-size: clamp(1.75rem, 5vw, 2.5rem); line-height: 1.2; font-weight: 700; margin: 0 0 1rem; }
-  .sub { color: var(--muted); font-size: 1.125rem; }
-  .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
-  .btn {
-    display: inline-block; padding: .65rem 1.1rem; border-radius: .4rem;
-    text-decoration: none; font-weight: 600; border: 2px solid var(--accent);
-  }
-  .btn-primary { background: var(--accent); color: var(--accent-text); }
-  .btn-secondary { color: var(--accent); }
-
-  section { padding: 3rem 0; border-bottom: 1px solid var(--rule); }
-  section:last-of-type { border-bottom: 0; }
-  .item { margin-bottom: 1.5rem; }
-  .item:last-child { margin-bottom: 0; }
-  .item strong { display: block; }
-  .note { color: var(--muted); font-style: italic; }
-  .name-note { background: var(--surface); padding: 1rem 1.25rem; border-radius: .4rem; }
-
-  form { margin: 1.5rem 0 2rem; }
-  label { display: block; font-weight: 600; margin: 0 0 .25rem; }
-  .optional { font-weight: 400; color: var(--muted); }
-  input, textarea {
-    display: block; width: 100%; margin: 0 0 1rem; padding: .6rem .7rem;
-    font: inherit; color: var(--text); background: var(--bg);
-    border: 1px solid var(--muted); border-radius: .4rem;
-  }
-  textarea { min-height: 9rem; resize: vertical; }
-  input:focus-visible, textarea:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; }
-  button.btn { font: inherit; font-weight: 600; cursor: pointer; }
-  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-
-  footer { padding: 2rem 0 3rem; color: var(--muted); font-size: .9375rem; border-top: 1px solid var(--rule); }
-  footer p { margin: 0 0 .5rem; }
-  /* Links spelled out as visible URLs, so a printout or screenshot still carries them. */
-  .links { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .25rem 1rem; margin: 0 0 1.25rem; }
-  .links dd { margin: 0; overflow-wrap: anywhere; }
-  @media (max-width: 30rem) {
-    .links { grid-template-columns: 1fr; gap: 0; }
-    .links dd { margin-bottom: .5rem; }
-  }
-</style>
+<link rel="stylesheet" href="/site.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<header>
+<header class="site-bar">
   <div class="wrap">
-    <h1>NouriLoop LLC</h1>
-    <p class="lead">Practical AI help for organizations that have to get it right.</p>
+    <a class="brand" href="/">NouriLoop LLC</a>
+    <nav class="site-nav" aria-label="Site">
+      <ul>
+      <li><a href="/services/">Services</a></li>
+      <li><a href="/work/">Work</a></li>
+      <li><a href="/training/">Training</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="hero">
+  <div class="wrap">
+    <h1>Practical AI help for organizations that have to get it right.</h1>
     <p class="sub">Training, adoption standards, and software development for public agencies and
       small businesses in Astoria, Clatsop County, and the Pacific Northwest.</p>
     <p class="sub">Decades of writing software by hand, and now the tools to do more of it for
@@ -107,130 +37,79 @@
       two games. AI-assisted work runs under a written process that keeps a person in
       control.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="#contact">Book a conversation</a>
-      <a class="btn btn-secondary" href="#training">See the training</a>
+      <a class="btn btn-primary" href="/contact/">Book a conversation</a>
+      <a class="btn btn-secondary" href="/training/">See the training</a>
     </div>
   </div>
-</header>
+</div>
 
-<main id="main">
-  <section id="services" aria-labelledby="services-h">
-    <div class="wrap">
-      <h2 id="services-h">What we do</h2>
+<section aria-labelledby="what-h">
+  <div class="wrap">
+    <h2 id="what-h">What we do</h2>
+    <ul>
+      <li><strong>Help your staff use AI tools well.</strong> A short session and a one-page
+        standard your team can adopt when you're ready.</li>
+      <li><strong>Plan AI work that fits your budget and your data.</strong> The right model for
+        each job, chosen for cost and for where your data may go.</li>
+      <li><strong>Give your developers gates, not guesswork.</strong> A written process for
+        AI-assisted coding, and a starter kit of skills your team keeps.</li>
+      <li><strong>Retire the technical debt you've been living with.</strong> Old systems rebuilt
+        and documented by an experienced developer, at a cost that finally fits the budget.</li>
+    </ul>
+    <p><a href="/services/">More about what we do</a></p>
+  </div>
+</section>
 
-      <h3>Help your staff use AI tools well</h3>
-      <p>Most organizations don't have an adoption problem; they have an expectations problem.
-        Nobody is sure what's allowed, what "done" means, or who's accountable. We fix that with a
-        short session for mixed audiences and a one-page standard — tuned to your needs — your
-        team can adopt the same week.</p>
+<section aria-labelledby="nouriloop-h">
+  <div class="wrap">
+    <h2 id="nouriloop-h">NouriLoop: AI built in from the ground up</h2>
+    <p>NouriLoop is a nutrition-tracking web app designed around AI from its first line of code,
+      not one with a chatbot added later. AI powers eight of its features:</p>
+    <ul>
+      <li>reading a meal, a recipe or a supplement label from a photo</li>
+      <li>turning a goal described in plain words into a measurable one, then checking in on it</li>
+      <li>explaining glucose responses from a continuous glucose monitor</li>
+      <li>"what if" predictions from your own data</li>
+      <li>a help assistant that answers from the app's own pages</li>
+    </ul>
+    <p>Underneath, it's built so cost stays a choice:</p>
+    <ul>
+      <li><strong>Pick the model that fits the budget.</strong> Use Anthropic, any of the many
+        models available through OpenRouter, or a model on your own Ollama server with no
+        per-call fees.</li>
+      <li><strong>Simple tasks use smaller models.</strong> The help assistant runs on a smaller,
+        cheaper model automatically. Only the work that needs a large model gets one.</li>
+      <li><strong>Test before trusting a cheaper model.</strong> A vision benchmark checks whether
+        a model reads food photos well enough before it's used.</li>
+      <li><strong>Every AI call is metered</strong>, so the cost of each feature is known, not
+        guessed.</li>
+      <li><strong>People review every estimate</strong> before it's saved.</li>
+    </ul>
+    <p>We design client systems the same way. No organization should be locked into one AI
+      vendor's prices.</p>
+    <p>It was built mostly with AI coding agents, with every step planned, directed and reviewed
+      by a person. That's the process our developer course teaches. Open source under AGPL, and
+      live at app.nouriloop.com.</p>
+    <p><a href="https://app.nouriloop.com/">Try it</a> · <a href="https://github.com/john-c-houser-tech/nouriloop-app">Source on GitHub</a></p>
+  </div>
+</section>
 
-      <h3>Give your developers gates, not guesswork</h3>
-      <p>AI coding agents produce more code than any person can review. The answer is a written
-        process — plan approval, tests shown, a second review, a human at the merge — and skills
-        that travel between projects. We bring a starter kit and leave your team running it.</p>
+<section aria-labelledby="more-h">
+  <div class="wrap">
+    <h2 id="more-h">More work</h2>
+    <p>Two browser games, Cranky Coop and Quiet Solitaire, each built with the same review
+      process. Plus open-source library software, in production at Oregon library systems.</p>
+    <p><a href="/work/">See the work</a></p>
+  </div>
+</section>
 
-      <h3>Retire the technical debt you've been living with</h3>
-      <p>Old applications, undocumented scripts, the system only one person understands. We
-        rebuild and document them with AI-assisted development, under your review, on your
-        repositories, at a pace that was not possible two years ago.</p>
-    </div>
-  </section>
-
-  <section id="work" aria-labelledby="work-h">
-    <div class="wrap">
-      <h2 id="work-h">Work</h2>
-
-      <div class="item">
-        <p><strong>NouriLoop</strong>
-          A production nutrition-tracking web app (Symfony, MariaDB, Stripe, Claude vision), open
-          source under AGPL, self-hostable. Built and operated solo.
-          <a href="https://github.com/john-c-houser-tech/nouriloop-app">Source on GitHub</a></p>
-      </div>
-
-      <div class="item">
-        <p><strong>Cranky Coop · Quiet Solitaire</strong>
-          Two browser games, each a single file, each with a build, a linter, and a review
-          process. Range and polish.<br>
-          Play: <a href="https://games.nouriloop.com/cranky-coop/">Cranky Coop</a> ·
-          <a href="https://games.nouriloop.com/solitaire/">Quiet Solitaire</a><br>
-          Source: <a href="https://github.com/john-c-houser-tech/cranky-coop">Cranky Coop</a> ·
-          <a href="https://github.com/john-c-houser-tech/solitaire">Quiet Solitaire</a></p>
-      </div>
-
-      <div class="item">
-        <p><strong>Library software</strong>
-          Open-source integration tools written for public libraries and in production use at
-          library systems in Multnomah and Clackamas Counties.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="training" aria-labelledby="training-h">
-    <div class="wrap">
-      <h2 id="training-h">Training</h2>
-
-      <div class="item">
-        <p><strong>Working with AI Tools: What to Expect, What to Require</strong>
-          50 minutes, any audience. What these tools are and aren't, why they fail, how to make
-          failures rare and harmless, and the three rules that make AI use safe in a public
-          organization. Leaves you with a one-page AI Use Standard and a Quality Procedures
-          checklist.</p>
-      </div>
-
-      <div class="item">
-        <p><strong>Coding with Agents Without Losing Control</strong>
-          One day or two half-days, for developers and the people who review their work. Context,
-          repository instructions, skills, process rules, and review gates. Leaves you with a
-          starter skill library and an instructions-file template, installed in your own
-          repository before you go home.</p>
-      </div>
-
-      <p>Both sessions align with your existing policies rather than replacing them. If anyone on
-        your team needs materials in a different format, captioning, or other support to take
-        part, ask — it's provided at no cost.</p>
-    </div>
-  </section>
-
-  <section id="about" aria-labelledby="about-h">
-    <div class="wrap">
-      <h2 id="about-h">About</h2>
-      <p>John Houser has spent 37 years in library and public-sector systems: systems
-        administration, integration, and development. Open-source software he wrote is still in
-        use at Oregon library systems. Most recently he has been a senior systems administrator
-        in the Multnomah County IT Division. In the last year he has rebuilt or extended more than
-        ten internal applications there, most of them his own hand-written code, with AI help. He
-        has also built a production web application with AI at its core and two games, and has
-        written the process rules that keep AI-assisted work under a person's control. NouriLoop
-        LLC is based in Astoria, Oregon.</p>
-      <p class="name-note"><em>The name:</em> you can nourish an organization the way you nourish
-        a person — steadily, with the right inputs and a strong feedback loop.</p>
-    </div>
-  </section>
-
-  <section id="contact" aria-labelledby="contact-h">
-    <div class="wrap">
-      <h2 id="contact-h">Contact</h2>
-      <p>Tell us a little about your organization and what you'd like to talk about. We'll reply by
-        email to set up a time.</p>
-      <form method="post" action="https://app.nouriloop.com/site-contact">
-        <label for="c-name">Name <span class="optional">(optional)</span></label>
-        <input id="c-name" name="name" type="text" maxlength="200" autocomplete="name">
-        <label for="c-email">Email</label>
-        <input id="c-email" name="email" type="email" maxlength="180" autocomplete="email" required>
-        <label for="c-message">What would you like to talk about?</label>
-        <textarea id="c-message" name="message" maxlength="5000" required></textarea>
-        <div class="hp" aria-hidden="true">
-          <label for="c-website">Leave this field empty</label>
-          <input id="c-website" name="website" type="text" tabindex="-1" autocomplete="off">
-        </div>
-        <button class="btn btn-primary" type="submit">Send</button>
-      </form>
-      <p>Or reach us directly: <a href="mailto:info@nouriloop.com">info@nouriloop.com</a> ·
-        <a href="tel:+15415598353">(541) 559-8353</a> · Astoria, Oregon</p>
-      <p>Serving Clatsop County and the Pacific Northwest. We travel within the region; closer is
-        better.</p>
-    </div>
-  </section>
+<section aria-labelledby="start-h">
+  <div class="wrap">
+    <h2 id="start-h">Start with a conversation</h2>
+    <p>Tell us what you're trying to do, and we'll tell you whether we can help.</p>
+    <p><a class="btn btn-primary" href="/contact/">Book a conversation</a></p>
+  </div>
+</section>
 </main>
 
 <footer>
@@ -249,7 +128,8 @@
       <dt>LinkedIn</dt>
       <dd><a href="https://www.linkedin.com/in/john-c-houser-a1a1761/">linkedin.com/in/john-c-houser-a1a1761</a></dd>
     </dl>
-    <p>NouriLoop LLC is an equal opportunity business.</p>
+    <p>NouriLoop LLC is an equal opportunity business.
+      <a href="/equal-opportunity/">Read our policy</a>.</p>
   </div>
 </footer>
 </body>
