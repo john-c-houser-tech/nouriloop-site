@@ -56,9 +56,16 @@ li { margin-bottom: .4rem; }
 .site-nav a { text-decoration: none; font-weight: 600; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 2px; }
 
+/* Photo banner: one of John's photographs at the top of each page, a hand-chosen 2:1 crop
+   always shown whole (never cropped further by CSS). */
+.banner { max-width: 64rem; margin: 0 auto; }
+.banner img { display: block; width: 100%; height: auto; }
+.banner figcaption { color: var(--muted); font-size: .8125rem; padding-top: .4rem; padding-bottom: .4rem; }
+.banner figcaption a { color: inherit; }
+
 /* Page header: the hero on Home, the page title elsewhere. */
-.page-head { padding: 3rem 0 2rem; border-bottom: 1px solid var(--rule); }
-.hero { padding: 4rem 0 3rem; border-bottom: 1px solid var(--rule); }
+.page-head { padding: 2rem 0 2rem; border-bottom: 1px solid var(--rule); }
+.hero { padding: 2.5rem 0 3rem; border-bottom: 1px solid var(--rule); }
 .sub { color: var(--muted); font-size: 1.125rem; }
 .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
 .btn {
