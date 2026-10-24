@@ -3,98 +3,60 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
 <title>Message sent — NouriLoop LLC</title>
-<style>
-  :root {
-    --bg: #fbfaf7;
-    --surface: #f1efe8;
-    --text: #1e2420;
-    --muted: #4f5a53;
-    --accent: #2f6b4f;
-    --accent-text: #ffffff;
-    --rule: #d9d5ca;
-    --measure: 40rem;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #151916;
-      --surface: #1e2420;
-      --text: #e9ece8;
-      --muted: #aab4ad;
-      --accent: #7cc3a0;
-      --accent-text: #0f1a14;
-      --rule: #333b36;
-    }
-  }
-  *, *::before, *::after { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font: 1.0625rem/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  }
-  .wrap { max-width: var(--measure); margin: 0 auto; padding: 0 1rem; }
-  .skip {
-    position: absolute; left: -999px; top: 0;
-    background: var(--accent); color: var(--accent-text); padding: .5rem 1rem;
-  }
-  .skip:focus { left: 1rem; }
-  a { color: var(--accent); text-underline-offset: .15em; }
-  a:focus-visible, .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-  h1, h2, h3 { line-height: 1.25; margin: 0 0 .5rem; }
-  h1 { font-size: 1rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
-  h2 { font-size: 1.5rem; margin-top: 0; }
-  h3 { font-size: 1.125rem; margin-top: 1.5rem; }
-  p { margin: 0 0 1rem; }
-
-  header { padding: 4rem 0 3rem; border-bottom: 1px solid var(--rule); }
-  .lead { font-size: clamp(1.75rem, 5vw, 2.5rem); line-height: 1.2; font-weight: 700; margin: 0 0 1rem; }
-  .sub { color: var(--muted); font-size: 1.125rem; }
-  .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
-  .btn {
-    display: inline-block; padding: .65rem 1.1rem; border-radius: .4rem;
-    text-decoration: none; font-weight: 600; border: 2px solid var(--accent);
-  }
-  .btn-primary { background: var(--accent); color: var(--accent-text); }
-  .btn-secondary { color: var(--accent); }
-
-  section { padding: 3rem 0; border-bottom: 1px solid var(--rule); }
-  section:last-of-type { border-bottom: 0; }
-  .item { margin-bottom: 1.5rem; }
-  .item:last-child { margin-bottom: 0; }
-  .item strong { display: block; }
-  .note { color: var(--muted); font-style: italic; }
-  .name-note { background: var(--surface); padding: 1rem 1.25rem; border-radius: .4rem; }
-
-  form { margin: 1.5rem 0 2rem; }
-  label { display: block; font-weight: 600; margin: 0 0 .25rem; }
-  .optional { font-weight: 400; color: var(--muted); }
-  input, textarea {
-    display: block; width: 100%; margin: 0 0 1rem; padding: .6rem .7rem;
-    font: inherit; color: var(--text); background: var(--bg);
-    border: 1px solid var(--muted); border-radius: .4rem;
-  }
-  textarea { min-height: 9rem; resize: vertical; }
-  input:focus-visible, textarea:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; }
-  button.btn { font: inherit; font-weight: 600; cursor: pointer; }
-  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-
-  footer { padding: 2rem 0 3rem; color: var(--muted); font-size: .9375rem; border-top: 1px solid var(--rule); }
-  footer p { margin: 0 0 .5rem; }
-</style>
+<meta name="description" content="AI training, adoption standards, and software development for public agencies and small businesses in Astoria, Clatsop County, and the Pacific Northwest.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/site.css">
 </head>
 <body>
-<header>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-bar">
   <div class="wrap">
-    <h1>NouriLoop LLC</h1>
-    <p class="lead">Thanks — your message is on its way.</p>
-    <p class="sub">We'll reply by email to set up a time to talk.</p>
+    <a class="brand" href="/">NouriLoop LLC</a>
+    <nav class="site-nav" aria-label="Site">
+      <ul>
+      <li><a href="/services/">Services</a></li>
+      <li><a href="/work/">Work</a></li>
+      <li><a href="/training/">Training</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="page-head">
+  <div class="wrap">
+    <h1>Thanks — your message is on its way.</h1>
+    <p class="sub">We'll reply by email within two business days to set up a time to talk.</p>
     <div class="actions">
       <a class="btn btn-primary" href="/">Back to nouriloop.com</a>
     </div>
   </div>
-</header>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <dl class="links">
+      <dt>NouriLoop LLC</dt>
+      <dd><a href="https://nouriloop.com/">nouriloop.com</a></dd>
+      <dt>The NouriLoop app</dt>
+      <dd><a href="https://app.nouriloop.com/">app.nouriloop.com</a></dd>
+      <dt>Cranky Coop</dt>
+      <dd><a href="https://games.nouriloop.com/cranky-coop/">games.nouriloop.com/cranky-coop</a></dd>
+      <dt>Quiet Solitaire</dt>
+      <dd><a href="https://games.nouriloop.com/solitaire/">games.nouriloop.com/solitaire</a></dd>
+      <dt>GitHub</dt>
+      <dd><a href="https://github.com/john-c-houser-tech">github.com/john-c-houser-tech</a></dd>
+      <dt>LinkedIn</dt>
+      <dd><a href="https://www.linkedin.com/in/john-c-houser-a1a1761/">linkedin.com/in/john-c-houser-a1a1761</a></dd>
+    </dl>
+    <p>NouriLoop LLC is an equal opportunity business.
+      <a href="/equal-opportunity/">Read our policy</a>.</p>
+  </div>
+</footer>
 </body>
 </html>
