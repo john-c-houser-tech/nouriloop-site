@@ -10,7 +10,7 @@ Six pages, one folder each: `index.html` (Home), `services/`, `work/`, `training
 page, including `contact/thanks/` and `contact/problem/`. `john-houser.jpg` is the About photo.
 
 Each page opens with one of John's photographs (`photos/`): a hand-chosen 2:1 crop of the
-original, shown whole at every width (CSS never crops it further), in 800, 1600 and 2400 px wide
+original (Looking East and Hotel Pier use the full 3:2 frame), shown whole at every width (CSS never crops it further), in 800, 1600 and 2400 px wide
 as WebP with JPEG fallback, metadata stripped. To change one, re-crop the original at 2:1, export
 all six files with the same names, and keep the alt text and caption in step.
 
