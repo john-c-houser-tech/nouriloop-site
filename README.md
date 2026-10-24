@@ -9,6 +9,11 @@ Six pages, one folder each: `index.html` (Home), `services/`, `work/`, `training
 `/site.css` and repeats the same site bar and footer, so a change to either goes into every
 page, including `contact/thanks/` and `contact/problem/`. `john-houser.jpg` is the About photo.
 
+Each page opens with one of John's photographs (`photos/`): a hand-chosen 2:1 crop of the
+original (Looking East and Hotel Pier use the full 3:2 frame), shown whole at every width (CSS never crops it further), in 800, 1600 and 2400 px wide
+as WebP with JPEG fallback, metadata stripped. To change one, re-crop the original at 2:1, export
+all six files with the same names, and keep the alt text and caption in step.
+
 The five service icons are maritime line drawings (lighthouse, compass, ship's wheel, anchor,
 channel buoy). They're inlined as SVG in `services/index.html` and `index.html` so they take the
 accent color and follow dark mode; `icons/` holds the source of each. Edit the source, then paste
