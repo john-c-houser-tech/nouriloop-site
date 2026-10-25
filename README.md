@@ -26,10 +26,11 @@ its paths into both pages.
 
 The logo is the Coil, a Flemish-coiled rope with a straight tail (source `icons/coil.svg`, same
 line style as the service icons). It's inlined before "NouriLoop LLC" in the site bar of every page
-(`.brand-mark`, accent color). The favicons at the root are drawn from it: `favicon.svg` (white coil
+(`.brand-mark`, accent color), and again before "NouriLoop LLC" in the footer links
+(`.footer-mark`, sized to the footer text). The favicons at the root are drawn from it: `favicon.svg` (white coil
 on a green rounded square), `favicon.ico` (16, 32 and 48 px) and `apple-touch-icon.png` (180 px,
 square; iOS rounds the corners). Each page links all three in its `<head>`. If the coil changes,
-update the source, the inline copy on every page and `favicon.svg`, then re-render the two raster
+update the source, both inline copies on every page and `favicon.svg`, then re-render the two raster
 files. The `privacy/` pages are redirects to the app and carry no site bar or icon links.
 
 The contact form posts to `https://app.nouriloop.com/site-contact` on the NouriLoop app,

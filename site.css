@@ -116,6 +116,8 @@ footer p { margin: 0 0 .5rem; }
 /* Links spelled out as visible URLs, so a printout or screenshot still carries them. */
 .links { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .25rem 1rem; margin: 0 0 1.25rem; }
 .links dd { margin: 0; overflow-wrap: anywhere; }
+/* The Coil again, sized to the footer text (see .brand-mark). */
+.footer-mark { width: 1.35em; height: 1.35em; margin-right: .4em; vertical-align: -.35em; color: var(--accent); }
 @media (max-width: 30rem) {
   .links { grid-template-columns: 1fr; gap: 0; }
   .links dd { margin-bottom: .5rem; }
