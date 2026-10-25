@@ -31,7 +31,15 @@ line style as the service icons). It's inlined before "NouriLoop LLC" in the sit
 on a green rounded square), `favicon.ico` (16, 32 and 48 px) and `apple-touch-icon.png` (180 px,
 square; iOS rounds the corners). Each page links all three in its `<head>`. If the coil changes,
 update the source, both inline copies on every page and `favicon.svg`, then re-render the two raster
-files. The `privacy/` pages are redirects to the app and carry no site bar or icon links.
+files. The `privacy/` pages are redirects to the app and carry no site bar or icon links. So are the
+old app paths from before the app moved to its subdomain (`pricing/`, `help/…`, `login/`,
+`register/`, and `about`/`pricing` under each language folder such as `de/`): each is a
+`noindex` page with a canonical link and an instant refresh to the same path on
+app.nouriloop.com. `/about/` itself is the LLC's About page, so the app's `/about` has no stub.
+
+Search: `robots.txt` points to `sitemap.xml`, which lists the seven real pages. Add a new page
+there too. Each page has its own `<meta name="description">` (wording in the copy doc ▸ Search
+descriptions) and a canonical link to its own https://nouriloop.com/ address.
 
 The contact form posts to `https://app.nouriloop.com/site-contact` on the NouriLoop app,
 which emails it to info@nouriloop.com and redirects back to `contact/thanks/` or
