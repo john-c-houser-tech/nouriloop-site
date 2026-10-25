@@ -51,6 +51,10 @@ li { margin-bottom: .4rem; }
   font-size: 1rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 600;
   color: var(--muted); text-decoration: none;
 }
+/* The Coil: a Flemish-coiled rope, drawn like the service icons. Source: icons/coil.svg. */
+/* Inline, not flex, so the brand keeps its text baseline in line with the nav; the drop centers
+   the mark on the capitals. */
+.brand-mark { width: 26px; height: 26px; margin-right: .6rem; vertical-align: -.45em; color: var(--accent); }
 .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .25rem 1.1rem; }
 .site-nav li { margin: 0; }
 .site-nav a { text-decoration: none; font-weight: 600; }
@@ -112,6 +116,8 @@ footer p { margin: 0 0 .5rem; }
 /* Links spelled out as visible URLs, so a printout or screenshot still carries them. */
 .links { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .25rem 1rem; margin: 0 0 1.25rem; }
 .links dd { margin: 0; overflow-wrap: anywhere; }
+/* The Coil again, sized to the footer text (see .brand-mark). */
+.footer-mark { width: 1.35em; height: 1.35em; margin-right: .4em; vertical-align: -.35em; color: var(--accent); }
 @media (max-width: 30rem) {
   .links { grid-template-columns: 1fr; gap: 0; }
   .links dd { margin-bottom: .5rem; }
