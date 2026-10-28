@@ -33,9 +33,11 @@ square; iOS rounds the corners). Each page links all three in its `<head>`. If t
 update the source, both inline copies on every page and `favicon.svg`, then re-render the two raster
 files. The `privacy/` pages are redirects to the app and carry no site bar or icon links. So are the
 old app paths from before the app moved to its subdomain (`pricing/`, `help/…`, `login/`,
-`register/`, and `about`/`pricing` under each language folder such as `de/`): each is a
-`noindex` page with a canonical link and an instant refresh to the same path on
-app.nouriloop.com. `/about/` itself is the LLC's About page, so the app's `/about` has no stub.
+`register/`, `reset-password/`, and `about`/`pricing`/`login`/`register` under each language
+folder such as `de/`): each is a page with a canonical link and an instant refresh to the same
+path on app.nouriloop.com. GitHub Pages can't send a 301 to another host; Google treats an
+instant meta refresh as a permanent redirect, so the stubs carry no `noindex` (it would contradict
+the redirect). `/about/` itself is the LLC's About page, so the app's `/about` has no stub.
 
 Search: `robots.txt` points to `sitemap.xml`, which lists the seven real pages. Add a new page
 there too. Each page has its own `<meta name="description">` (wording in the copy doc ▸ Search
