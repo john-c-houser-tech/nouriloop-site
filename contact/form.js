@@ -20,6 +20,7 @@
   var tokenReady = false;
   var captchaReady = true;
   var tokenTimer = null;
+  var latest = 0;
 
   function update() { send.disabled = !(tokenReady && captchaReady); }
 
@@ -32,13 +33,17 @@
     });
   }
 
-  function showWidget(siteKey) {
-    captchaReady = false;
+  function showWidget(siteKey, reset) {
     if (widgetId !== null) {
-      window.turnstile.reset(widgetId);
+      if (reset) {
+        captchaReady = false;
+        window.turnstile.reset(widgetId);
+      }
     } else if (window.turnstile) {
+      captchaReady = false;
       renderWidget(siteKey);
     } else {
+      captchaReady = false;
       var script = document.createElement('script');
       script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
       script.async = true;
@@ -48,19 +53,38 @@
     }
   }
 
-  function load() {
-    tokenReady = false;
-    token.value = '';
-    clearTimeout(tokenTimer);
-    update();
+  // fresh: the page was restored from the browser's cache, so the token and the Turnstile
+  // answer on it are spent. Otherwise this is the periodic refresh: keep the token that is
+  // still good, and swap it only once a new one arrives.
+  function load(fresh) {
+    var mine = ++latest;
+    if (fresh) {
+      tokenReady = false;
+      token.value = '';
+      clearTimeout(tokenTimer);
+      update();
+    }
     fetch(api + '/site-contact/token', { credentials: 'omit', cache: 'no-store' })
       .then(function (response) { return response.ok ? response.json() : Promise.reject(); })
       .then(function (data) {
+        if (mine !== latest) { return; } // a newer request has taken over
+        clearTimeout(tokenTimer);
         token.value = data.token || '';
-        if (data.turnstileSiteKey) { showWidget(data.turnstileSiteKey); }
-        tokenTimer = setTimeout(function () { tokenReady = true; update(); }, minTokenAge);
+        tokenReady = false;
+        update();
+        if (data.turnstileSiteKey) {
+          showWidget(data.turnstileSiteKey, fresh);
+        } else {
+          // Turnstile is off (or was switched off while the tab was open).
+          if (widgetId !== null) { window.turnstile.remove(widgetId); widgetId = null; }
+          captchaReady = true;
+        }
+        tokenTimer = setTimeout(function () {
+          if (mine === latest) { tokenReady = true; update(); }
+        }, minTokenAge);
       })
       .catch(function () {
+        if (mine !== latest || !fresh) { return; } // a failed refresh keeps the current token
         // The app is unreachable: let the visitor try; the app's problem page gives our contacts.
         tokenReady = true;
         captchaReady = true;
@@ -68,12 +92,12 @@
       });
   }
 
-  load();
+  load(true);
   // A token is good for two hours; ask again before a tab left open that long runs out.
-  setInterval(load, 90 * 60 * 1000);
+  setInterval(function () { load(false); }, 90 * 60 * 1000);
   // Back to a page kept in the browser's cache: the token and the single-use Turnstile
   // answer on it are spent, so ask for fresh ones.
   window.addEventListener('pageshow', function (event) {
-    if (event.persisted) { load(); }
+    if (event.persisted) { load(true); }
   });
 }());
