@@ -7,7 +7,8 @@ Six pages, one folder each: `index.html` (Home), `services/`, `work/`, `training
 `contact/`, plus `equal-opportunity/` (the LLC's policy, copied word for word from
 `NouriLoop-LLC-Equal-Opportunity-Policy.md` §1–§8; change both together). Every page links
 `/site.css` and repeats the same site bar and footer, so a change to either goes into every
-page, including `contact/thanks/` and `contact/problem/`. `john-houser.jpg` is the About photo.
+page, including `contact/thanks/`, `contact/problem/` and `404.html` (GitHub Pages serves it for any
+missing address; it carries `noindex`). `john-houser.jpg` is the About photo.
 
 Each page opens with one of John's photographs (`photos/`): a hand-chosen 2:1 crop of the
 original (Looking East and Hotel Pier use the full 3:2 frame), shown whole at every width (CSS never crops it further), in 800, 1600 and 2400 px wide
@@ -41,7 +42,13 @@ the redirect). `/about/` itself is the LLC's About page, so the app's `/about` h
 
 Search: `robots.txt` points to `sitemap.xml`, which lists the seven real pages. Add a new page
 there too. Each page has its own `<meta name="description">` (wording in the copy doc ▸ Search
-descriptions) and a canonical link to its own https://nouriloop.com/ address.
+descriptions) and a canonical link to its own https://nouriloop.com/ address. Below the canonical
+link, each of the seven pages carries Open Graph tags (title and description repeat the page's own;
+the image is the page's 1600 px banner JPEG, and the equal-opportunity page borrows the home
+banner) so a shared link gets a preview. `index.html` also carries JSON-LD for the LLC
+(ProfessionalService, with the five services linked to their anchors on `services/`) and the
+WebSite; `about/index.html` carries the Person. Change the description or banner of a page and
+update its Open Graph tags in step; a new service needs a line in the home-page catalog.
 
 The contact form posts to `https://app.nouriloop.com/site-contact` on the NouriLoop app,
 which emails it to info@nouriloop.com and redirects back to `contact/thanks/` or
