@@ -109,6 +109,7 @@ input, textarea {
 textarea { min-height: 9rem; resize: vertical; }
 input:focus-visible, textarea:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; }
 button.btn { font: inherit; font-weight: 600; cursor: pointer; }
+button.btn:disabled { opacity: .5; cursor: not-allowed; }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 footer { padding: 2rem 0 3rem; color: var(--muted); font-size: .9375rem; border-top: 1px solid var(--rule); }

@@ -1,7 +1,8 @@
 # nouriloop-site
 
 The NouriLoop LLC business site (Transformation Plan §3A). Plain HTML/CSS, no build step,
-no framework, no third-party scripts.
+no framework. The one third-party script is Cloudflare Turnstile on the contact page, loaded
+only when the app turns it on.
 
 Six pages, one folder each: `index.html` (Home), `services/`, `work/`, `training/`, `about/`,
 `contact/`, plus `equal-opportunity/` (the LLC's policy, copied word for word from
@@ -56,7 +57,10 @@ The contact form posts to `https://app.nouriloop.com/site-contact` on the NouriL
 which emails it to info@nouriloop.com and redirects back to `contact/thanks/` or
 `contact/problem/` here (app side: `.claude/rules/registration.md` ▸ Business-site contact
 form in the app repo). Keep those two paths and the field names (`name`, `email`,
-`message`, honeypot `website`) in step with the app. Copy source: `NouriLoop-Site-Copy.md` in the
+`message`, honeypot `website`, token `ft`) in step with the app. `contact/form.js` fetches the
+signed token from the app's `GET /site-contact/token`, and, when the app returns a Turnstile
+site key, loads Cloudflare's script and shows the widget (the key lives in the app's
+`TURNSTILE_SITEKEY`, not here; the widget's hostnames must include nouriloop.com). Copy source: `NouriLoop-Site-Copy.md` in the
 NouriLoop Business folder.
 
 Local preview: https://nouriloop-site.localhost:8443 (Caddy `file_server` on this directory).
