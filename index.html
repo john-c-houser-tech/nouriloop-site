@@ -142,6 +142,8 @@
       then rebuilt or extended with AI help, plus a production web app with AI at its core, a
       security tool that checks Linux servers for break-ins, and two games. The games were for us.
       AI-assisted work runs under a written process that keeps a person in control.</p>
+    <p class="sub">John Houser does the work himself, after 37 years in library and public-sector
+      systems. <a href="/about/">More about John</a>.</p>
     <div class="actions">
       <a class="btn btn-primary" href="/contact/">Book a conversation</a>
       <a class="btn btn-secondary" href="/training/">See the training</a>
@@ -172,15 +174,14 @@
   <div class="wrap">
     <h2 id="checker-h">Compromise Checker: security in plain words</h2>
     <p>A tool that checks Linux servers for signs of a break-in. It logs in over SSH, runs a
-      read-only collector, and brings the evidence back to your own machine; the tool writes
-      nothing to the server. Each server gets an estimated chance of a break-in, in plain
-      words, with the evidence behind every finding and what to do about it. Open source under
-      AGPL.</p>
-    <p>It's built for small organizations that can't afford commercial security products, and it
-      shows how we handle AI in sensitive work: the optional AI advisor explains results and suggests next steps
-      but never acts; server names, user names, addresses and key fingerprints are replaced
-      with placeholders by default before anything is sent; and a model on your own machine is
-      an option.</p>
+      read-only collector, and brings the evidence back to your own machine. The tool writes
+      nothing to the server. Each server gets an estimated chance of a break-in, in plain words,
+      with the evidence behind every finding and what to do about it. It's built for small
+      organizations that can't afford commercial security products, and it shows how we handle
+      AI in sensitive work: the optional AI advisor explains results and suggests next steps but
+      never acts. Names and addresses are replaced by default before anything is sent, and a
+      model on your own machine is an option. Open source under AGPL. The first release is
+      coming.</p>
     <figure class="shot">
       <a href="/screens/cc-fleet-2280.jpg">
       <picture>
@@ -192,7 +193,6 @@
       <figcaption>Your servers, in the order to deal with them: one plain answer at the top, then each server with what's new since the last check and its chance of a break-in.</figcaption>
     </figure>
     <p class="note">From a demo fleet of throwaway servers, attacked on purpose. Real results; addresses replaced.</p>
-    <p>In development; the first release is coming.</p>
     <p><a href="/work/#checker-h">More about the checker</a> · <a href="https://github.com/john-c-houser-tech/compromise-checker">Source on GitHub</a></p>
   </div>
 </section>
@@ -200,40 +200,14 @@
 <section aria-labelledby="nouriloop-h">
   <div class="wrap">
     <h2 id="nouriloop-h">NouriLoop: AI built in from the ground up</h2>
-    <p>NouriLoop is a nutrition-tracking web app designed around AI from its first line of code,
-      not one with a chatbot added later. AI powers eight of its features:</p>
-    <ul>
-      <li>reading a meal, a recipe or a supplement label from a photo</li>
-      <li>turning a goal described in plain words into a measurable one, then checking in on it</li>
-      <li>explaining glucose responses from a continuous glucose monitor</li>
-      <li>"what if" predictions from your own data</li>
-      <li>a help assistant that answers from the app's own pages</li>
-    </ul>
-    <figure class="shot">
-      <a href="/screens/analysis-2280.jpg">
-      <picture>
-        <source type="image/webp" srcset="/screens/analysis-800.webp 800w, /screens/analysis-1600.webp 1600w, /screens/analysis-2280.webp 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)">
-        <img src="/screens/analysis-800.jpg" srcset="/screens/analysis-800.jpg 800w, /screens/analysis-1600.jpg 1600w, /screens/analysis-2280.jpg 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)"
-          width="1600" height="2335" alt="NouriLoop's Confirm and Refine screen: a photo of a brunch plate, the AI's description of it, an estimate of 1,020 calories, 28 g protein, 130 g carbohydrates and 42 g fat at medium confidence, and two follow-up questions." loading="lazy">
-      </picture>
-      </a>
-      <figcaption>Meal analysis: the AI describes the photo, estimates the nutrition, says how sure it is, and asks about what it can't see. Demo account with sample data.</figcaption>
-    </figure>
-    <p>Underneath, it's built so cost stays a choice:</p>
-    <ul>
-      <li><strong>Pick the model that fits the budget.</strong> Use Anthropic, any of the many
-        models available through OpenRouter, or a model on your own Ollama server with no
-        per-call fees.</li>
-      <li><strong>Simple tasks use smaller models.</strong> The help assistant runs on a smaller,
-        cheaper model automatically. Only the work that needs a large model gets one.</li>
-      <li><strong>Test before trusting a cheaper model.</strong> A vision benchmark checks whether
-        a model reads food photos well enough before it's used.</li>
-      <li><strong>Every AI call is metered</strong>, so the cost of each feature is known, not
-        guessed.</li>
-      <li><strong>People review every estimate</strong> before it's saved.</li>
-    </ul>
-    <p>We design client systems the same way. No organization should be locked into one AI
-      vendor's prices.</p>
+    <p>A nutrition-tracking web app designed around AI from its first line of code, not one
+      with a chatbot added later. AI reads meals from photos, turns a goal described in plain
+      words into a measurable one, and explains glucose responses. A person reviews every
+      estimate before it's saved. Underneath, cost stays a choice: the app runs on Anthropic, on
+      any of the models available through OpenRouter, or on your own Ollama server; simple tasks
+      go to smaller models automatically; and every AI call is metered, so the cost of each
+      feature is known, not guessed. We design client systems the same way. No organization
+      should be locked into one AI vendor's prices.</p>
     <figure class="shot">
       <a href="/screens/ai-provider-2280.jpg">
       <picture>
