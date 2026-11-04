@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Work — NouriLoop LLC</title>
-<meta name="description" content="Public work by NouriLoop LLC: the open-source NouriLoop nutrition app with AI built in, two browser games, and library software in production in Oregon.">
+<meta name="description" content="Public work by NouriLoop LLC: Compromise Checker, which finds signs of a break-in on Linux servers; the NouriLoop nutrition app with AI built in; browser games; and library software in production in Oregon.">
 <link rel="canonical" href="https://nouriloop.com/work/">
 <link rel="stylesheet" href="/site.css">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -45,6 +45,70 @@
   </div>
 </div>
 
+<section aria-labelledby="cc-h">
+  <div class="wrap">
+    <h2 id="cc-h">Compromise Checker</h2>
+    <p>A tool that checks Linux servers for signs of a break-in. It logs in over SSH, runs a
+      small read-only collector on the server's own Python, brings the evidence back and
+      analyses it on your own machine. Nothing is written to the server. Open source under AGPL,
+      and built for small organizations that can't afford commercial security products and
+      would rather not use a command line. In development; the first release is coming.</p>
+    <ul>
+      <li><strong>What it does:</strong> checks Red Hat Enterprise Linux 9 and later (tested on
+        Rocky Linux and AlmaLinux) and Ubuntu 22.04 and later; compares each server with its own
+        baseline; links findings that tell an attack's story; and gives each server a chance of a
+        break-in, in plain words, with the evidence behind every finding and what the check
+        couldn't see. Signed threat packs teach it about new attacks without a new release of
+        the tool. An optional AI advisor explains a result, proposes whitelist rules, suggests
+        better coverage and advises on remediation. It only advises: nothing it says runs.</li>
+      <li><strong>What it's built on:</strong> Python, AsyncSSH, and Django for the web
+        interface; evidence encrypted with age. The advisor works with Anthropic's models or a
+        local model through Ollama, with people's names, addresses and keys replaced before
+        anything is sent.</li>
+      <li><strong>How it's tested:</strong> on throwaway servers running seven Linux images, with
+        auditd recording every write by the tool's session, the collector wrote nothing. Thirty
+        scripted break-ins on Ubuntu and Rocky Linux each produced their finding, and fresh
+        servers score Low.</li>
+      <li><strong>How it was built:</strong> the same way as NouriLoop: with AI coding agents,
+        and John planning, directing and reviewing every step. More than 120 pull requests in
+        its first ten days, each one reviewed before it was merged, and 60 test files that run
+        on every change.</li>
+    </ul>
+    <figure class="shot">
+      <a href="/screens/cc-fleet-2280.jpg">
+      <picture>
+        <source type="image/webp" srcset="/screens/cc-fleet-800.webp 800w, /screens/cc-fleet-1600.webp 1600w, /screens/cc-fleet-2280.webp 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)">
+        <img src="/screens/cc-fleet-800.jpg" srcset="/screens/cc-fleet-800.jpg 800w, /screens/cc-fleet-1600.jpg 1600w, /screens/cc-fleet-2280.jpg 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)"
+          width="1600" height="2627" alt="Compromise Checker's server list: a red Act on this now badge, the headline 2 of your 6 servers need attention now, counts by band, filters, and the first server, shop-web-1, with strong signs of a break-in, what's new since the last check, and a 100% chance of a break-in." loading="lazy">
+      </picture>
+      </a>
+      <figcaption>Your servers, in the order to deal with them: one plain answer at the top, then each server with what's new since the last check and its chance of a break-in.</figcaption>
+    </figure>
+    <figure class="shot">
+      <a href="/screens/cc-host-2280.jpg">
+      <picture>
+        <source type="image/webp" srcset="/screens/cc-host-800.webp 800w, /screens/cc-host-1600.webp 1600w, /screens/cc-host-2280.webp 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)">
+        <img src="/screens/cc-host-800.jpg" srcset="/screens/cc-host-800.jpg 800w, /screens/cc-host-1600.jpg 1600w, /screens/cc-host-2280.jpg 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)"
+          width="1600" height="3072" alt="One server's page in Compromise Checker: shop-web-1, strong signs of a break-in, a 100% estimate on a scale from Unlikely to Very likely, an At a glance table of 62 signs, and the first finding: an account other than root has UID 0, marked very serious, with what to do." loading="lazy">
+      </picture>
+      </a>
+      <figcaption>One server: the estimate, what couldn't be checked, and each finding in plain words with what to do about it. Text from the server is boxed apart, since an intruder could have written it.</figcaption>
+    </figure>
+    <figure class="shot">
+      <a href="/screens/cc-threats-2280.jpg">
+      <picture>
+        <source type="image/webp" srcset="/screens/cc-threats-800.webp 800w, /screens/cc-threats-1600.webp 1600w, /screens/cc-threats-2280.webp 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)">
+        <img src="/screens/cc-threats-800.jpg" srcset="/screens/cc-threats-800.jpg 800w, /screens/cc-threats-1600.jpg 1600w, /screens/cc-threats-2280.jpg 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)"
+          width="1600" height="2905" alt="Compromise Checker's Known threats page: the PHP2Shell threat pack (CVE-2026-109618 and CVE-2026-109619), with one server open to it now, one not checked yet, four with no sign of exposure, and the pack's advice on upgrading and on settings that reduce the risk." loading="lazy">
+      </picture>
+      </a>
+      <figcaption>Known threats: a signed threat pack for PHP2Shell, which servers are open to it, and what the pack advises.</figcaption>
+    </figure>
+    <p class="note">Screenshots are from a demo fleet of throwaway servers, attacked on purpose. Real results; addresses replaced.</p>
+    <p><a href="https://github.com/john-c-houser-tech/compromise-checker">Source on GitHub</a></p>
+  </div>
+</section>
+
 <section aria-labelledby="nl-h">
   <div class="wrap">
     <h2 id="nl-h">NouriLoop</h2>
@@ -76,26 +140,6 @@
       </picture>
       </a>
       <figcaption>Today: calories so far, the food's inflammation effect, a quick check-in, and each meal's glucose response.</figcaption>
-    </figure>
-    <figure class="shot">
-      <a href="/screens/glucose-2280.jpg">
-      <picture>
-        <source type="image/webp" srcset="/screens/glucose-800.webp 800w, /screens/glucose-1600.webp 1600w, /screens/glucose-2280.webp 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)">
-        <img src="/screens/glucose-800.jpg" srcset="/screens/glucose-800.jpg 800w, /screens/glucose-1600.jpg 1600w, /screens/glucose-2280.jpg 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)"
-          width="1600" height="1559" alt="NouriLoop's Glucose Insights over 30 days: meals with the biggest glucose rises, the gentlest meals, and meals that rose more than their nutrition predicted." loading="lazy">
-      </picture>
-      </a>
-      <figcaption>Glucose insights: meals ranked by how much they raised glucose, and the ones that rose more than their nutrition predicted.</figcaption>
-    </figure>
-    <figure class="shot">
-      <a href="/screens/goal-2280.jpg">
-      <picture>
-        <source type="image/webp" srcset="/screens/goal-800.webp 800w, /screens/goal-1600.webp 1600w, /screens/goal-2280.webp 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)">
-        <img src="/screens/goal-800.jpg" srcset="/screens/goal-800.jpg 800w, /screens/goal-1600.jpg 1600w, /screens/goal-2280.jpg 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)"
-          width="1600" height="2019" alt="A NouriLoop goal, Boost Daily Fiber, with its definition, weekly schedule, and a history of check-ins such as 26.8 g per day, goal achieved." loading="lazy">
-      </picture>
-      </a>
-      <figcaption>A goal in plain words, turned into a measurable one, with weekly check-ins.</figcaption>
     </figure>
     <p class="note">Screenshots are from a demo account with sample data.</p>
     <p><a href="https://app.nouriloop.com/">Try it</a> · <a href="https://github.com/john-c-houser-tech/nouriloop-app">Source on GitHub</a></p>
