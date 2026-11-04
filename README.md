@@ -7,7 +7,8 @@ Six pages, one folder each: `index.html` (Home), `services/`, `work/`, `training
 `contact/`, plus `equal-opportunity/` (the LLC's policy, copied word for word from
 `NouriLoop-LLC-Equal-Opportunity-Policy.md` §1–§8; change both together). Every page links
 `/site.css` and repeats the same site bar and footer, so a change to either goes into every
-page, including `contact/thanks/` and `contact/problem/`. `john-houser.jpg` is the About photo.
+page, including `contact/thanks/`, `contact/problem/` and `404.html` (GitHub Pages serves it for any
+missing address; it carries `noindex`). `john-houser.jpg` is the About photo.
 
 Each page opens with one of John's photographs (`photos/`): a hand-chosen 2:1 crop of the
 original (Looking East and Hotel Pier use the full 3:2 frame), shown whole at every width (CSS never crops it further), in 800, 1600 and 2400 px wide
