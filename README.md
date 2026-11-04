@@ -47,7 +47,8 @@ link, each of the seven pages carries Open Graph tags (title and description rep
 the image is the page's 1600 px banner JPEG, and the equal-opportunity page borrows the home
 banner) so a shared link gets a preview. `index.html` also carries JSON-LD for the LLC
 (ProfessionalService, with the five services linked to their anchors on `services/`) and the
-WebSite; `about/index.html` carries the Person. Change the description or banner of a page and
+WebSite; `about/index.html` carries the Person; `services/index.html` carries the FAQPage, whose
+answers must stay word for word the same as the "Questions we get" section on the page. Change the description or banner of a page and
 update its Open Graph tags in step; a new service needs a line in the home-page catalog.
 
 The contact form posts to `https://app.nouriloop.com/site-contact` on the NouriLoop app,
