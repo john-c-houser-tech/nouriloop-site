@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Work — NouriLoop LLC</title>
-<meta name="description" content="Public work by NouriLoop LLC: Compromise Checker, which finds signs of a break-in on Linux servers; the NouriLoop nutrition app with AI built in; browser games; and library software in production in Oregon.">
+<meta name="description" content="Public work by NouriLoop LLC: Compromise Checker, which looks for break-ins on Linux servers; the NouriLoop nutrition app; browser games; and library software.">
 <link rel="canonical" href="https://nouriloop.com/work/">
 <link rel="stylesheet" href="/site.css">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -50,26 +50,26 @@
     <h2 id="checker-h">Compromise Checker</h2>
     <p>A tool that checks Linux servers for signs of a break-in. It logs in over SSH, runs a
       small read-only collector on the server's own Python, brings the evidence back and
-      analyses it on your own machine. Nothing is written to the server. Open source under AGPL,
+      analyzes it on your own machine. The tool writes nothing to the server. Open source under AGPL,
       and built for small organizations that can't afford commercial security products and
       would rather not use a command line. In development; the first release is coming.</p>
     <ul>
       <li><strong>What it does:</strong> checks Red Hat Enterprise Linux 9 and later (tested on
         Rocky Linux and AlmaLinux) and Ubuntu 22.04 and later; compares each server with its own
-        baseline; links findings that tell an attack's story; and gives each server a chance of a
+        baseline; links findings that tell an attack's story; and estimates each server's chance of a
         break-in, in plain words, with the evidence behind every finding and what the check
         couldn't see. Signed threat packs teach it about new attacks without a new release of
         the tool. An optional AI advisor explains a result, proposes whitelist rules, suggests
         better coverage and advises on remediation. It only advises: nothing it says runs.</li>
       <li><strong>What it's built on:</strong> Python, AsyncSSH, and Django for the web
         interface; evidence encrypted with age. The advisor works with Anthropic's models or a
-        local model through Ollama, with people's names, addresses and keys replaced before
-        anything is sent.</li>
-      <li><strong>How it's tested:</strong> on throwaway servers running seven Linux images, with
-        auditd recording every write by the tool's session, the collector wrote nothing. Thirty
-        scripted break-ins on Ubuntu and Rocky Linux each produced their finding, and fresh
+        local model through Ollama or the like, with server names, user names, addresses and key
+        fingerprints replaced by default before anything is sent.</li>
+      <li><strong>How it's tested:</strong> on throwaway servers running seven Linux images, auditd
+        recorded every write by the tool's session, and the collector made none. Thirty
+        scripted break-ins on Ubuntu and Rocky Linux each produced its finding, and fresh
         servers score Low.</li>
-      <li><strong>How it was built:</strong> the same way as NouriLoop: with AI coding agents,
+      <li><strong>How it was built:</strong> the same way as NouriLoop, with AI coding agents
         and John planning, directing and reviewing every step. More than 120 pull requests in
         its first ten days, each one reviewed before it was merged, and 60 test files that run
         on every change.</li>
