@@ -45,8 +45,8 @@
       small businesses in Astoria, Clatsop County, and the Pacific Northwest.</p>
     <p class="sub">Decades of writing software by hand, and now the tools to do more of it for
       less. In the past year: more than ten applications, most of them first written by hand and
-      then rebuilt or extended with AI help, plus a production web app with AI at its core and
-      two games. AI-assisted work runs under a written process that keeps a person in
+      then rebuilt or extended with AI help, plus a production web app with AI at its core, a
+      security tool that checks Linux servers for break-ins, and two games. AI-assisted work runs under a written process that keeps a person in
       control.</p>
     <div class="actions">
       <a class="btn btn-primary" href="/contact/">Book a conversation</a>
@@ -71,6 +71,35 @@
         and fixed, with automated checks so the next one is routine.</span></li>
     </ul>
     <p><a href="/services/">More about what we do</a></p>
+  </div>
+</section>
+
+<section aria-labelledby="checker-h">
+  <div class="wrap">
+    <h2 id="checker-h">Compromise Checker: security in plain words</h2>
+    <p>A tool that checks Linux servers for signs of a break-in. It logs in over SSH, runs a
+      read-only collector, and brings the evidence back to your own machine; the tool writes
+      nothing to the server. Each server gets an estimated chance of a break-in, in plain
+      words, with the evidence behind every finding and what to do about it. Open source under
+      AGPL.</p>
+    <p>It's built for small organizations without a security team, and it shows how we handle
+      AI in sensitive work: the optional AI advisor explains results and suggests next steps
+      but never acts; server names, user names, addresses and key fingerprints are replaced
+      with placeholders by default before anything is sent; and a model on your own machine is
+      an option.</p>
+    <figure class="shot">
+      <a href="/screens/cc-fleet-2280.jpg">
+      <picture>
+        <source type="image/webp" srcset="/screens/cc-fleet-800.webp 800w, /screens/cc-fleet-1600.webp 1600w, /screens/cc-fleet-2280.webp 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)">
+        <img src="/screens/cc-fleet-800.jpg" srcset="/screens/cc-fleet-800.jpg 800w, /screens/cc-fleet-1600.jpg 1600w, /screens/cc-fleet-2280.jpg 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)"
+          width="1600" height="2627" alt="Compromise Checker's server list: a red Act on this now badge, the headline 2 of your 6 servers need attention now, counts by band, filters, and the first server, shop-web-1, with strong signs of a break-in, what's new since the last check, and a 100% chance of a break-in." loading="lazy">
+      </picture>
+      </a>
+      <figcaption>Your servers, in the order to deal with them. From a demo fleet of throwaway servers, attacked on purpose: real results, addresses replaced.</figcaption>
+    </figure>
+    <p>In development; the first release is coming.
+      <a href="/work/#checker-h">More about the checker</a> ·
+      <a href="https://github.com/john-c-houser-tech/compromise-checker">Source on GitHub</a></p>
   </div>
 </section>
 
