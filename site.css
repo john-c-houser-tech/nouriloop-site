@@ -102,7 +102,7 @@ section:last-of-type { border-bottom: 0; }
   border-radius: .4rem; font: .9rem/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   white-space: pre-wrap; overflow-wrap: anywhere; user-select: all;
 }
-code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .95em; }
+main code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .95em; }
 .name-note { background: var(--surface); padding: 1rem 1.25rem; border-radius: .4rem; }
 .portrait { display: block; width: 10rem; height: 10rem; border-radius: 50%; object-fit: cover; margin: 0 0 1.5rem; }
 
