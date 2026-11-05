@@ -41,10 +41,10 @@ path on app.nouriloop.com. GitHub Pages can't send a 301 to another host; Google
 instant meta refresh as a permanent redirect, so the stubs carry no `noindex` (it would contradict
 the redirect). `/about/` itself is the LLC's About page, so the app's `/about` has no stub.
 
-Search: `robots.txt` points to `sitemap.xml`, which lists the seven real pages. Add a new page
+Search: `robots.txt` points to `sitemap.xml`, which lists the eight real pages. Add a new page
 there too. Each page has its own `<meta name="description">` (wording in the copy doc ▸ Search
 descriptions) and a canonical link to its own https://nouriloop.com/ address. Below the
-canonical link, each of the seven pages carries Open Graph tags (title and description repeat
+canonical link, each of the eight pages carries Open Graph tags (title and description repeat
 the page's own; the image is the page's 1600 px banner JPEG, and the equal-opportunity page
 borrows the home banner) so a shared link gets a preview. `index.html` also carries JSON-LD for
 the LLC (ProfessionalService, with the five services linked to their anchors on `services/`) and
@@ -62,5 +62,11 @@ signed token from the app's `GET /site-contact/token`, and, when the app returns
 site key, loads Cloudflare's script and shows the widget (the key lives in the app's
 `TURNSTILE_SITEKEY`, not here; the widget's hostnames must include nouriloop.com). Copy source: `NouriLoop-Site-Copy.md` in the
 NouriLoop Business folder.
+
+`work/compromise-checker/install/` is the Compromise Checker install page. It holds the one line to paste,
+which carries the installer's hash, and that hash is all that protects the installer, so the page is
+kept apart from the release's own files. After each release of the tool, replace the line with the
+one `scripts/release.py verify` prints, and the version on the page. It uses no script: one click
+selects the line (CSS `user-select: all`).
 
 Local preview: https://nouriloop-site.localhost:8443 (Caddy `file_server` on this directory).
