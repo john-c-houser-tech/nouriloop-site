@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Install Compromise Checker — NouriLoop LLC</title>
-<meta name="description" content="How to install Compromise Checker 0.1.1, a pre-release, on Ubuntu 24.04 or 26.04 or Rocky Linux 9 or 10: one line to paste, and what it does.">
+<meta name="description" content="How to install Compromise Checker 0.1.2, a pre-release, on Ubuntu 24.04 or 26.04 or Rocky Linux 9 or 10: one line to paste, and what it does.">
 <link rel="canonical" href="https://nouriloop.com/work/compromise-checker/install/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="NouriLoop LLC">
 <meta property="og:title" content="Install Compromise Checker — NouriLoop LLC">
-<meta property="og:description" content="How to install Compromise Checker 0.1.1, a pre-release, on Ubuntu 24.04 or 26.04 or Rocky Linux 9 or 10: one line to paste, and what it does.">
+<meta property="og:description" content="How to install Compromise Checker 0.1.2, a pre-release, on Ubuntu 24.04 or 26.04 or Rocky Linux 9 or 10: one line to paste, and what it does.">
 <meta property="og:url" content="https://nouriloop.com/work/compromise-checker/install/">
 <meta property="og:image" content="https://nouriloop.com/photos/moored-in-mist-1600.jpg">
 <meta property="og:image:width" content="1600">
@@ -44,7 +44,7 @@
   <div class="wrap">
     <nav class="crumb" aria-label="Breadcrumb"><a href="/work/#checker-h">Work</a> <span aria-hidden="true">›</span> Compromise Checker</nav>
     <h1>Install Compromise Checker</h1>
-    <p class="sub">Version 0.1.1, a pre-release. Expect rough edges.</p>
+    <p class="sub">Version 0.1.2, a pre-release. Expect rough edges.</p>
   </div>
 </div>
 
@@ -69,7 +69,7 @@
   <div class="wrap">
     <h2 id="line-h">The line to paste</h2>
     <p>Open a terminal on that machine and paste this, then press Enter. Click it once to select all of it.</p>
-    <pre class="cmd" id="install-line">(d=$(mktemp -d) &amp;&amp; trap &#x27;rm -rf &quot;$d&quot;&#x27; EXIT &amp;&amp; curl -fsSL https://github.com/john-c-houser-tech/compromise-checker/releases/download/v0.1.1/install.py -o &quot;$d/install.py&quot; &amp;&amp; echo &quot;c4d9caa23cbd2ea0ca28dc3655b4d2e71e4b2833e7b946b585d6eb6c96d4c4ef  $d/install.py&quot; | sha256sum -c - &amp;&amp; sudo python3 -I &quot;$d/install.py&quot;)</pre>
+    <pre class="cmd" id="install-line">(d=$(mktemp -d) &amp;&amp; trap &#x27;rm -rf &quot;$d&quot;&#x27; EXIT &amp;&amp; curl -fsSL https://github.com/john-c-houser-tech/compromise-checker/releases/download/v0.1.2/install.py -o &quot;$d/install.py&quot; &amp;&amp; echo &quot;8bc8989552356ef0aff29e0bcc291e5e53b53b7fbe919ff422857bccef022a5e  $d/install.py&quot; | sha256sum -c - &amp;&amp; sudo python3 -I &quot;$d/install.py&quot;)</pre>
     <p><strong>Copy it from this page, and only from here.</strong> The line downloads the installer and checks
       it against the hash in the line. That hash is all that protects the installer, since the file comes from
       the same place as the rest of the release. So check that your browser's address bar shows
@@ -115,7 +115,7 @@
       address (using Let's Encrypt's test certificates), and then restarted to see that the tool came back.
       The line was the one above, with the installer's questions answered ahead of time. The installer was also
       tried with a wrong hash, and refused. To check the release yourself, see the
-      <a href="https://github.com/john-c-houser-tech/compromise-checker/releases/tag/v0.1.1">release page</a>,
+      <a href="https://github.com/john-c-houser-tech/compromise-checker/releases/tag/v0.1.2">release page</a>,
       where every file is listed with its hash, and
       <a href="https://github.com/john-c-houser-tech/compromise-checker/blob/main/docs/releasing.md">how to
       rebuild it</a> and compare.</p>
