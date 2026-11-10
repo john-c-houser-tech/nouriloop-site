@@ -58,19 +58,21 @@
 <section aria-labelledby="checker-h">
   <div class="wrap">
     <h2 id="checker-h">Compromise Checker</h2>
-    <p>A tool that checks Linux servers for signs of a break-in. It logs in over SSH, runs a
-      small read-only collector on the server's own Python, brings the evidence back and
+    <p>A tool that checks Linux servers for signs of a break-in. It answers one question: has
+      this server been broken into? It isn't a vulnerability scanner or a patching tool. It
+      logs in over SSH, runs a small read-only collector on the server's own Python, brings the evidence back and
       analyzes it on your own machine. The tool writes nothing to the server. Open source under AGPL,
       and built for small organizations that can't afford commercial security products and
-      would rather not use a command line. The first pre-release, 0.1.0, is out:
+      would rather not use a command line. Pre-release 0.1.2 is out:
       <a href="/work/compromise-checker/install/">how to install it</a>.</p>
     <ul>
       <li><strong>What it does:</strong> checks Red Hat Enterprise Linux 9 and later (tested on
         Rocky Linux and AlmaLinux) and Ubuntu 22.04 and later; compares each server with its own
         baseline; links findings that tell an attack's story; and estimates each server's chance of a
         break-in, in plain words, with the evidence behind every finding and what the check
-        couldn't see. Signed threat packs teach it about new attacks without a new release of
-        the tool. An optional AI advisor explains a result, proposes whitelist rules, suggests
+        couldn't see. Signed threat packs cover only attacks seen in the wild that leave signs on
+        a server, so the checker knows when a server was open to one and what traces to look for,
+        without a new release of the tool. An optional AI advisor explains a result, proposes whitelist rules, suggests
         better coverage and advises on remediation. It only advises: nothing it says runs.</li>
       <li><strong>What it's built on:</strong> Python, AsyncSSH, and Django for the web
         interface; evidence encrypted with age. The advisor works with Anthropic's models or a
@@ -113,7 +115,7 @@
           width="1600" height="2905" alt="Compromise Checker's Known threats page: the PHP2Shell threat pack (CVE-2026-109618 and CVE-2026-109619), with one server open to it now, one not checked yet, four with no sign of exposure, and the pack's advice on upgrading and on settings that reduce the risk." loading="lazy">
       </picture>
       </a>
-      <figcaption>Known threats: a signed threat pack for PHP2Shell, which servers are open to it, and what the pack advises.</figcaption>
+      <figcaption>Known threats: a signed threat pack for PHP2Shell, an attack seen in the wild: which servers are open to it, and what the pack advises.</figcaption>
     </figure>
     <p class="note">Screenshots are from a demo fleet of throwaway servers, attacked on purpose. Real results; addresses replaced.</p>
     <p><a href="https://github.com/john-c-houser-tech/compromise-checker">Source on GitHub</a> · <a href="https://www.linkedin.com/pulse/php-incident-inspired-me-john-c-houser-qjb8c">Why John built it (LinkedIn)</a></p>
