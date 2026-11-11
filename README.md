@@ -41,6 +41,13 @@ path on app.nouriloop.com. GitHub Pages can't send a 301 to another host; Google
 instant meta refresh as a permanent redirect, so the stubs carry no `noindex` (it would contradict
 the redirect). `/about/` itself is the LLC's About page, so the app's `/about` has no stub.
 
+Two more stubs give the Compromise Checker repository's Sponsor button addresses that say what
+they are, since GitHub shows a funding link's address and nothing else:
+`work/compromise-checker/buy-me-a-coffee/` goes to the Stripe payment link (it carries `noindex`
+and no canonical link: a payment page shouldn't be in search results), and
+`work/compromise-checker/sponsor-a-threat-pack-or-distro/` goes to the repository's
+`docs/sponsoring.md`. If the Stripe link is ever replaced, change it here and nowhere else.
+
 Search: `robots.txt` points to `sitemap.xml`, which lists the eight real pages. Add a new page
 there too. Each page has its own `<meta name="description">` (wording in the copy doc ▸ Search
 descriptions) and a canonical link to its own https://nouriloop.com/ address. Below the
