@@ -11,6 +11,11 @@ Six pages, one folder each: `index.html` (Home), `services/`, `work/`, `training
 page, including `contact/thanks/`, `contact/problem/` and `404.html` (GitHub Pages serves it for any
 missing address; it carries `noindex`). `john-houser.jpg` is the About photo.
 
+The footer is three bands with a rule between them: NouriLoop LLC and nouriloop.com alone on the
+first line; the links in two columns (left: GitHub, Compromise Checker, the NouriLoop app; right:
+LinkedIn, then the games), with names and addresses lined up down each column and one column on a
+narrow screen; and the equal opportunity line. Every outside link is spelled out as a visible address.
+
 The six pages use the wide layout: `<body class="wide">` plus `/site.js` (first-party, about 30
 lines: a shadow under the site bar after scrolling, and parts that rise into place as they scroll
 into view). The layout classes are in the last block of `site.css`: `hero-grid` (photo, then title
@@ -37,7 +42,7 @@ its paths into both pages.
 
 The logo is the Coil, a Flemish-coiled rope with a straight tail (source `icons/coil.svg`, same
 line style as the service icons). It's inlined before "NouriLoop LLC" in the site bar of every page
-(`.brand-mark`, accent color), and again before "NouriLoop LLC" in the footer links
+(`.brand-mark`, accent color), and again before "NouriLoop LLC" on the footer's first line
 (`.footer-mark`, sized to the footer text). The favicons at the root are drawn from it: `favicon.svg` (white coil
 on a green rounded square), `favicon.ico` (16, 32 and 48 px) and `apple-touch-icon.png` (180 px,
 square; iOS rounds the corners). Each page links all three in its `<head>`. If the coil changes,
