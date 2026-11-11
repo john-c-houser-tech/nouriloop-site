@@ -253,6 +253,9 @@ section.panel-cta { background: var(--accent); border-color: var(--accent); colo
   .split.flip { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .split.flip .split-text { order: 2; }
   .rail { display: grid; grid-template-columns: 20rem minmax(0, 1fr); column-gap: 4rem; align-items: start; }
+  /* On pages whose sections are rails, the title and its text sit on the same two columns. */
+  .hero-grid.rail-head { grid-template-columns: 20rem minmax(0, 1fr); }
+  .rail-head .hero-more { max-width: var(--measure); }
   .rail > :first-child { grid-column: 1; grid-row: 1; position: sticky; top: 6rem; margin-bottom: 0; }
   .rail > .rail-body { grid-column: 2; max-width: var(--measure); }
   .rail > .shots { grid-column: 1 / -1; }
