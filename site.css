@@ -124,23 +124,23 @@ footer { padding: 2rem 0 3rem; color: var(--muted); font-size: .9375rem; border-
 footer p { margin: 0; }
 /* Three parts with a rule between them: the company, what it has built, the policy line.
    Links are spelled out as visible URLs, so a printout or screenshot still carries them. */
-.foot-llc, .foot-apps { padding-bottom: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--rule); }
+.foot-llc, .foot-apps { padding-bottom: .7rem; margin-bottom: .7rem; border-bottom: 1px solid var(--rule); }
 .foot-name { color: var(--text); font-weight: 600; }
 .foot-name a { margin-left: .6em; font-weight: 400; }
-.foot-row { display: flex; flex-wrap: wrap; gap: .25rem 2.5rem; margin: .5rem 0 0; }
+.foot-row { display: flex; flex-wrap: wrap; gap: .25rem 2.5rem; margin: .25rem 0 0; }
 .foot-row div { display: flex; flex-wrap: wrap; gap: 0 1rem; }
 .foot-row dd, .links dd { margin: 0; overflow-wrap: anywhere; }
 /* Applications on the left, games on the right; one column on a narrow screen. */
-.foot-apps { display: grid; gap: 1.25rem 2.5rem; }
+.foot-apps { display: grid; gap: .25rem 2.5rem; }
 @media (min-width: 52rem) { .foot-apps { grid-template-columns: 1fr 1fr; } }
-.foot-head { color: var(--text); font-weight: 600; margin-bottom: .35rem; }
 .links { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .25rem 1rem; margin: 0; }
 /* The Coil again, sized to the footer text (see .brand-mark). */
 .footer-mark { width: 1.35em; height: 1.35em; margin-right: .4em; vertical-align: -.35em; color: var(--accent); }
 @media (max-width: 30rem) {
   .links { grid-template-columns: 1fr; gap: 0; }
   .links dd { margin-bottom: .5rem; }
-  .links dd:last-child { margin-bottom: 0; }
+  .foot-apps { row-gap: 0; }
+  .foot-apps > div:last-child dd:last-child { margin-bottom: 0; }
 }
 
 /* ------------------------------------------------------------------------------------------

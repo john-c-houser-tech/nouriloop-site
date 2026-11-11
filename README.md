@@ -14,7 +14,7 @@ missing address; it carries `noindex`). `john-houser.jpg` is the About photo.
 The footer has three parts with a rule between them: the company (NouriLoop LLC and nouriloop.com
 alone on the first line, then GitHub and LinkedIn), what it has built (applications on the left with
 Compromise Checker first, games on the right; one column on a narrow screen), and the equal
-opportunity line. Every link is spelled out as a visible address.
+opportunity line. Every outside link is spelled out as a visible address.
 
 The six pages use the wide layout: `<body class="wide">` plus `/site.js` (first-party, about 30
 lines: a shadow under the site bar after scrolling, and parts that rise into place as they scroll
