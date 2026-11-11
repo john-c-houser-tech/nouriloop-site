@@ -11,10 +11,10 @@ Six pages, one folder each: `index.html` (Home), `services/`, `work/`, `training
 page, including `contact/thanks/`, `contact/problem/` and `404.html` (GitHub Pages serves it for any
 missing address; it carries `noindex`). `john-houser.jpg` is the About photo.
 
-The footer has three parts with a rule between them: the company (NouriLoop LLC and nouriloop.com
-alone on the first line, then GitHub and LinkedIn), what it has built (applications on the left with
-Compromise Checker first, games on the right; one column on a narrow screen), and the equal
-opportunity line. Every outside link is spelled out as a visible address.
+The footer is three bands with a rule between them: NouriLoop LLC and nouriloop.com alone on the
+first line; the links in two columns (left: GitHub, Compromise Checker, the NouriLoop app; right:
+LinkedIn, then the games), with names and addresses lined up down each column and one column on a
+narrow screen; and the equal opportunity line. Every outside link is spelled out as a visible address.
 
 The six pages use the wide layout: `<body class="wide">` plus `/site.js` (first-party, about 30
 lines: a shadow under the site bar after scrolling, and parts that rise into place as they scroll
