@@ -121,15 +121,30 @@ button.btn:disabled { opacity: .5; cursor: not-allowed; }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 footer { padding: 2rem 0 3rem; color: var(--muted); font-size: .9375rem; border-top: 1px solid var(--rule); }
-footer p { margin: 0 0 .5rem; }
-/* Links spelled out as visible URLs, so a printout or screenshot still carries them. */
-.links { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .25rem 1rem; margin: 0 0 1.25rem; }
-.links dd { margin: 0; overflow-wrap: anywhere; }
+footer p { margin: 0; }
+/* The company on its own line, a rule, the links, a rule, the policy line.
+   Outside links are spelled out as visible URLs, so a printout or screenshot still carries them. */
+.foot-name, .foot-grid { padding-bottom: .7rem; margin-bottom: .7rem; border-bottom: 1px solid var(--rule); }
+.foot-name { color: var(--text); font-weight: 600; }
+.foot-name a { margin-left: .6em; font-weight: 400; }
 /* The Coil again, sized to the footer text (see .brand-mark). */
 .footer-mark { width: 1.35em; height: 1.35em; margin-right: .4em; vertical-align: -.35em; color: var(--accent); }
+/* Left: GitHub, then the applications. Right: LinkedIn, then the games. The four lists share
+   the grid's columns (subgrid), so names line up with names and addresses with addresses. */
+.foot-grid { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .25rem 1rem; }
+.links { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .25rem 1rem; margin: 0; }
+@supports (grid-template-columns: subgrid) {
+  .links { grid-column: span 2; grid-template-columns: subgrid; }
+}
+.links dd { margin: 0; overflow-wrap: anywhere; }
+/* Two columns only where the longest address still fits on one line. */
+@media (min-width: 64rem) {
+  .foot-grid { grid-template-columns: repeat(2, max-content auto); }
+}
 @media (max-width: 30rem) {
-  .links { grid-template-columns: 1fr; gap: 0; }
+  .foot-grid, .links { display: block; }
   .links dd { margin-bottom: .5rem; }
+  .links:last-child dd:last-child { margin-bottom: 0; }
 }
 
 /* ------------------------------------------------------------------------------------------
@@ -268,7 +283,6 @@ section.panel-cta { background: var(--accent); border-color: var(--accent); colo
   .pair, .duo { grid-template-columns: 1fr 1fr; }
   .duo { column-gap: 4rem; }
   .duo.games { column-gap: 1.5rem; }
-  .links { grid-template-columns: repeat(2, max-content minmax(0, 1fr)); }
 }
 
 /* The text column stays in view beside a tall screenshot, when the window is tall enough to show it all. */
