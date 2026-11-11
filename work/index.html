@@ -79,7 +79,7 @@
         couldn't see. Signed threat packs cover only attacks seen in the wild that leave signs on
         a server, so the checker knows when a server was open to one and what traces to look for,
         without a new release of the tool. An optional AI advisor explains a result, proposes whitelist rules, suggests
-        better coverage and advises on remediation. It only advises: nothing it says runs.</li>
+        better coverage and advises on remediation. The tool never runs anything the advisor suggests.</li>
       <li><strong>What it's built on:</strong> Python, AsyncSSH, and Django for the web
         interface; evidence encrypted with age. The advisor works with Anthropic's models or a
         local model through Ollama or the like, with server names, user names, addresses and key
@@ -130,7 +130,7 @@
     </figure>
     </div>
     <div class="rail-body">
-    <p class="note">Screenshots are from a demo fleet of throwaway servers, attacked on purpose. Real results; addresses replaced.</p>
+    <p class="note">Screenshots are from a demo fleet of throwaway servers, attacked on purpose. The results are real and the addresses have been replaced.</p>
     <p><a href="https://github.com/john-c-houser-tech/compromise-checker">Source on GitHub</a> · <a href="https://www.linkedin.com/pulse/php-incident-inspired-me-john-c-houser-qjb8c">Why John built it (LinkedIn)</a></p>
     </div>
   </div>
