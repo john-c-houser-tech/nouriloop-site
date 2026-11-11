@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Work — NouriLoop LLC</title>
-<meta name="description" content="Public work by NouriLoop LLC: Compromise Checker, which looks for break-ins on Linux servers; the NouriLoop nutrition app; browser games; and library software.">
+<meta name="description" content="Public work by NouriLoop LLC: Compromise Checker, which looks for break-ins on Linux servers; the NouriLoop nutrition application; browser games; and library software.">
 <link rel="canonical" href="https://nouriloop.com/work/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="NouriLoop LLC">
 <meta property="og:title" content="Work — NouriLoop LLC">
-<meta property="og:description" content="Public work by NouriLoop LLC: Compromise Checker, which looks for break-ins on Linux servers; the NouriLoop nutrition app; browser games; and library software.">
+<meta property="og:description" content="Public work by NouriLoop LLC: Compromise Checker, which looks for break-ins on Linux servers; the NouriLoop nutrition application; browser games; and library software.">
 <meta property="og:url" content="https://nouriloop.com/work/">
 <meta property="og:image" content="https://nouriloop.com/photos/moored-in-mist-1600.jpg">
 <meta property="og:image:width" content="1600">
@@ -17,11 +17,12 @@
 <meta property="og:image:alt" content="The bow of a ship moored at a grain terminal in morning fog.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/site.css">
+<script src="/site.js" defer></script>
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
-<body>
+<body class="wide">
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-bar">
@@ -40,24 +41,29 @@
 </header>
 
 <main id="main">
-<figure class="banner">
-  <picture>
-    <source type="image/webp" srcset="/photos/moored-in-mist-800.webp 800w, /photos/moored-in-mist-1600.webp 1600w, /photos/moored-in-mist-2400.webp 2400w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)">
-    <img src="/photos/moored-in-mist-1600.jpg" srcset="/photos/moored-in-mist-800.jpg 800w, /photos/moored-in-mist-1600.jpg 1600w, /photos/moored-in-mist-2400.jpg 2400w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)"
-      width="1600" height="800" alt="The bow of a ship moored at a grain terminal in morning fog." fetchpriority="high">
-  </picture>
-  <figcaption><em>Moored in Mist</em> · photograph by <a href="https://www.johnchouser.com/">John C. Houser</a></figcaption>
-</figure>
 <div class="page-head">
-  <div class="wrap">
+  <div class="wrap hero-grid rail-head">
+    <figure class="banner">
+      <picture>
+        <source type="image/webp" srcset="/photos/moored-in-mist-800.webp 800w, /photos/moored-in-mist-1600.webp 1600w, /photos/moored-in-mist-2400.webp 2400w" sizes="(min-width: 60rem) 71rem, calc(100vw - 2rem)">
+        <img src="/photos/moored-in-mist-1600.jpg" srcset="/photos/moored-in-mist-800.jpg 800w, /photos/moored-in-mist-1600.jpg 1600w, /photos/moored-in-mist-2400.jpg 2400w" sizes="(min-width: 60rem) 71rem, calc(100vw - 2rem)"
+          width="1600" height="800" alt="The bow of a ship moored at a grain terminal in morning fog." fetchpriority="high">
+      </picture>
+      <figcaption><em>Moored in Mist</em> · photograph by <a href="https://www.johnchouser.com/">John C. Houser</a></figcaption>
+    </figure>
+    <div class="hero-lead">
     <h1>Work</h1>
+    </div>
+    <div class="hero-more">
     <p class="sub">Everything here is public. You can try it, read the source, and see how it was built.</p>
+    </div>
   </div>
 </div>
 
 <section aria-labelledby="checker-h">
-  <div class="wrap">
+  <div class="wrap rail">
     <h2 id="checker-h">Compromise Checker</h2>
+    <div class="rail-body">
     <p>A tool that checks Linux servers for signs of a break-in. It answers one question: has
       this server been broken into? It isn't a vulnerability scanner or a patching tool. It
       logs in over SSH, runs a small read-only collector on the server's own Python, brings the evidence back and
@@ -69,11 +75,11 @@
       <li><strong>What it does:</strong> checks Red Hat Enterprise Linux 9 and later (tested on
         Rocky Linux and AlmaLinux) and Ubuntu 22.04 and later; compares each server with its own
         baseline; links findings that tell an attack's story; and estimates each server's chance of a
-        break-in, in plain words, with the evidence behind every finding and what the check
+        break-in, with the evidence behind every finding and what the check
         couldn't see. Signed threat packs cover only attacks seen in the wild that leave signs on
         a server, so the checker knows when a server was open to one and what traces to look for,
         without a new release of the tool. An optional AI advisor explains a result, proposes whitelist rules, suggests
-        better coverage and advises on remediation. It only advises: nothing it says runs.</li>
+        better coverage and advises on remediation. The tool never runs anything the advisor suggests.</li>
       <li><strong>What it's built on:</strong> Python, AsyncSSH, and Django for the web
         interface; evidence encrypted with age. The advisor works with Anthropic's models or a
         local model through Ollama or the like, with server names, user names, addresses and key
@@ -90,51 +96,56 @@
         false alarm or something it missed all make it better:
         <a href="https://github.com/john-c-houser-tech/compromise-checker#how-to-help">how to help</a>.</li>
     </ul>
+    </div>
+    <div class="shots">
     <figure class="shot">
       <a href="/screens/cc-fleet-2280.jpg">
       <picture>
-        <source type="image/webp" srcset="/screens/cc-fleet-800.webp 800w, /screens/cc-fleet-1600.webp 1600w, /screens/cc-fleet-2280.webp 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)">
-        <img src="/screens/cc-fleet-800.jpg" srcset="/screens/cc-fleet-800.jpg 800w, /screens/cc-fleet-1600.jpg 1600w, /screens/cc-fleet-2280.jpg 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)"
+        <source type="image/webp" srcset="/screens/cc-fleet-800.webp 800w, /screens/cc-fleet-1600.webp 1600w, /screens/cc-fleet-2280.webp 2280w" sizes="(min-width: 60rem) 23rem, calc(100vw - 2rem)">
+        <img src="/screens/cc-fleet-800.jpg" srcset="/screens/cc-fleet-800.jpg 800w, /screens/cc-fleet-1600.jpg 1600w, /screens/cc-fleet-2280.jpg 2280w" sizes="(min-width: 60rem) 23rem, calc(100vw - 2rem)"
           width="1600" height="2627" alt="Compromise Checker's server list: a red Act on this now badge, the headline 2 of your 6 servers need attention now, counts by band, filters, and the first server, shop-web-1, with strong signs of a break-in, what's new since the last check, and a 100% chance of a break-in." loading="lazy">
       </picture>
       </a>
-      <figcaption>Your servers, in the order to deal with them: one plain answer at the top, then each server with what's new since the last check and its chance of a break-in.</figcaption>
+      <figcaption>Your servers, in the order to deal with them: one answer at the top, then each server with what's new since the last check and its chance of a break-in.</figcaption>
     </figure>
     <figure class="shot">
       <a href="/screens/cc-host-2280.jpg">
       <picture>
-        <source type="image/webp" srcset="/screens/cc-host-800.webp 800w, /screens/cc-host-1600.webp 1600w, /screens/cc-host-2280.webp 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)">
-        <img src="/screens/cc-host-800.jpg" srcset="/screens/cc-host-800.jpg 800w, /screens/cc-host-1600.jpg 1600w, /screens/cc-host-2280.jpg 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)"
+        <source type="image/webp" srcset="/screens/cc-host-800.webp 800w, /screens/cc-host-1600.webp 1600w, /screens/cc-host-2280.webp 2280w" sizes="(min-width: 60rem) 23rem, calc(100vw - 2rem)">
+        <img src="/screens/cc-host-800.jpg" srcset="/screens/cc-host-800.jpg 800w, /screens/cc-host-1600.jpg 1600w, /screens/cc-host-2280.jpg 2280w" sizes="(min-width: 60rem) 23rem, calc(100vw - 2rem)"
           width="1600" height="3072" alt="One server's page in Compromise Checker: shop-web-1, strong signs of a break-in, a 100% estimate on a scale from Unlikely to Very likely, an At a glance table of 62 signs, and the first finding: an account other than root has UID 0, marked very serious, with what to do." loading="lazy">
       </picture>
       </a>
-      <figcaption>One server: the estimate, what couldn't be checked, and each finding in plain words with what to do about it. Text from the server is boxed apart, since an intruder could have written it.</figcaption>
+      <figcaption>One server: the estimate, what couldn't be checked, and each finding explained, with what to do about it. Text from the server is boxed apart, since an intruder could have written it.</figcaption>
     </figure>
     <figure class="shot">
       <a href="/screens/cc-threats-2280.jpg">
       <picture>
-        <source type="image/webp" srcset="/screens/cc-threats-800.webp 800w, /screens/cc-threats-1600.webp 1600w, /screens/cc-threats-2280.webp 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)">
-        <img src="/screens/cc-threats-800.jpg" srcset="/screens/cc-threats-800.jpg 800w, /screens/cc-threats-1600.jpg 1600w, /screens/cc-threats-2280.jpg 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)"
+        <source type="image/webp" srcset="/screens/cc-threats-800.webp 800w, /screens/cc-threats-1600.webp 1600w, /screens/cc-threats-2280.webp 2280w" sizes="(min-width: 60rem) 23rem, calc(100vw - 2rem)">
+        <img src="/screens/cc-threats-800.jpg" srcset="/screens/cc-threats-800.jpg 800w, /screens/cc-threats-1600.jpg 1600w, /screens/cc-threats-2280.jpg 2280w" sizes="(min-width: 60rem) 23rem, calc(100vw - 2rem)"
           width="1600" height="2905" alt="Compromise Checker's Known threats page: the PHP2Shell threat pack (CVE-2026-109618 and CVE-2026-109619), with one server open to it now, one not checked yet, four with no sign of exposure, and the pack's advice on upgrading and on settings that reduce the risk." loading="lazy">
       </picture>
       </a>
       <figcaption>Known threats: a signed threat pack for PHP2Shell, an attack seen in the wild: which servers are open to it, and what the pack advises.</figcaption>
     </figure>
-    <p class="note">Screenshots are from a demo fleet of throwaway servers, attacked on purpose. Real results; addresses replaced.</p>
+    </div>
+    <div class="rail-body">
+    <p class="note">Screenshots are from a demo fleet of throwaway servers, attacked on purpose. The results are real and the addresses have been replaced.</p>
     <p><a href="https://github.com/john-c-houser-tech/compromise-checker">Source on GitHub</a> · <a href="https://www.linkedin.com/pulse/php-incident-inspired-me-john-c-houser-qjb8c">Why John built it (LinkedIn)</a></p>
+    </div>
   </div>
 </section>
 
 <section aria-labelledby="nl-h">
-  <div class="wrap">
+  <div class="wrap rail">
     <h2 id="nl-h">NouriLoop</h2>
-    <p>A nutrition-tracking web app with AI built in from the ground up. It's live at
+    <div class="rail-body">
+    <p>A nutrition-tracking web application with built-in AI features. It's live at
       app.nouriloop.com, open source under AGPL, and anyone can run their own copy with Docker in
       about an hour.</p>
     <ul>
       <li><strong>What it does:</strong> logs meals, recipes and supplement labels from a photo;
-        shows how each meal moved your glucose, using a continuous glucose monitor; turns a goal
-        described in plain words into a measurable one, with check-ins in the app, by email or by
+        shows how each meal moved your glucose, using a continuous glucose monitor; turns a goal described in your own words into a measurable one, with check-ins in the application, by email or by
         text; works in six languages.</li>
       <li><strong>What it's built on:</strong> Symfony and PHP, MariaDB, Stripe and Twilio. The AI
         provider can be swapped between Anthropic, OpenRouter and Ollama, and every AI call is
@@ -150,8 +161,8 @@
     <figure class="shot">
       <a href="/screens/today-2280.jpg">
       <picture>
-        <source type="image/webp" srcset="/screens/today-800.webp 800w, /screens/today-1600.webp 1600w, /screens/today-2280.webp 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)">
-        <img src="/screens/today-800.jpg" srcset="/screens/today-800.jpg 800w, /screens/today-1600.jpg 1600w, /screens/today-2280.jpg 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)"
+        <source type="image/webp" srcset="/screens/today-800.webp 800w, /screens/today-1600.webp 1600w, /screens/today-2280.webp 2280w" sizes="(min-width: 30rem) 26rem, calc(100vw - 2rem)">
+        <img src="/screens/today-800.jpg" srcset="/screens/today-800.jpg 800w, /screens/today-1600.jpg 1600w, /screens/today-2280.jpg 2280w" sizes="(min-width: 30rem) 26rem, calc(100vw - 2rem)"
           width="1600" height="1977" alt="NouriLoop's Today screen for a demo user: calories so far, the day's anti-inflammatory score, a how-do-you-feel check-in with three sliders, and glucose responses to breakfast and lunch." loading="lazy">
       </picture>
       </a>
@@ -159,31 +170,37 @@
     </figure>
     <p class="note">Screenshots are from a demo account with sample data.</p>
     <p><a href="https://app.nouriloop.com/">Try it</a> · <a href="https://github.com/john-c-houser-tech/nouriloop-app">Source on GitHub</a></p>
+    </div>
   </div>
 </section>
 
 <section aria-labelledby="cc-h">
   <div class="wrap">
+    <div class="duo games">
+    <div class="panel">
     <h2 id="cc-h">Cranky Coop</h2>
     <p>A physics slingshot game: the raccoons ate the eggs, and the hens take it personally. Six
       levels, hand-drawn canvas art, sound synthesized in the browser, all in one HTML file. MIT
       license.</p>
     <p><a href="https://games.nouriloop.com/cranky-coop/">Play</a> · <a href="https://github.com/john-c-houser-tech/cranky-coop">Source</a></p>
-
+    </div>
+    <div class="panel">
     <h2 id="qs-h">Quiet Solitaire</h2>
     <p>Klondike, Spider and FreeCell in one HTML file, with no ads, no accounts and no purchases.
       Play with a mouse or entirely from the keyboard, with three hand-drawn decks. MIT
       license.</p>
     <p><a href="https://games.nouriloop.com/solitaire/">Play</a> · <a href="https://github.com/john-c-houser-tech/solitaire">Source</a></p>
-
+    </div>
+    </div>
     <p class="note">Small projects get the same care as large ones: a build check and a review
       before every merge. The hens insisted.</p>
   </div>
 </section>
 
 <section aria-labelledby="lib-h">
-  <div class="wrap">
+  <div class="wrap rail">
     <h2 id="lib-h">Library software</h2>
+    <div class="rail-body">
     <p>Open-source tools for libraries that run the SirsiDynix Symphony library system. Both are
       released under the GPL and are in production at Oregon library systems.</p>
     <ul>
@@ -198,6 +215,7 @@
       open source when it's finished.</p>
     <p><a href="https://github.com/multnomah-county-it/libilsws">libilsws source</a> ·
       <a href="https://github.com/multnomah-county-it/librelibconnected">ReLibConnectEd source</a></p>
+    </div>
   </div>
 </section>
 </main>
