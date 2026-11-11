@@ -11,6 +11,15 @@ Six pages, one folder each: `index.html` (Home), `services/`, `work/`, `training
 page, including `contact/thanks/`, `contact/problem/` and `404.html` (GitHub Pages serves it for any
 missing address; it carries `noindex`). `john-houser.jpg` is the About photo.
 
+The six pages use the wide layout: `<body class="wide">` plus `/site.js` (first-party, about 30
+lines: a shadow under the site bar after scrolling, and parts that rise into place as they scroll
+into view). The layout classes are in the last block of `site.css`: `hero-grid` (photo, then title
+beside its text), `rail` (a section's heading on the left, content at reading width on the right),
+`cards`, `tiles`, `split`, `shots`, `duo`/`pair` with `panel`, and `faq`. Pages without the class
+(the policy, the install page, thanks, problem, 404) keep one reading column under the same wide
+site bar and footer. All motion is inside `prefers-reduced-motion: no-preference`, and every page
+reads the same without the script. The install page loads no script; keep it that way.
+
 Each page opens with one of John's photographs (`photos/`): a hand-chosen 2:1 crop of the
 original (Looking East and Hotel Pier use the full 3:2 frame), shown whole at every width (CSS never crops it further), in 800, 1600 and 2400 px wide
 as WebP with JPEG fallback, metadata stripped. To change one, re-crop the original at 2:1, export

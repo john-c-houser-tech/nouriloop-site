@@ -101,11 +101,12 @@
 }
 </script>
 <link rel="stylesheet" href="/site.css">
+<script src="/site.js" defer></script>
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
-<body>
+<body class="wide home">
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-bar">
@@ -124,29 +125,32 @@
 </header>
 
 <main id="main">
-<figure class="banner">
-  <picture>
-    <source type="image/webp" srcset="/photos/getting-ready-800.webp 800w, /photos/getting-ready-1600.webp 1600w, /photos/getting-ready-2400.webp 2400w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)">
-    <img src="/photos/getting-ready-1600.jpg" srcset="/photos/getting-ready-800.jpg 800w, /photos/getting-ready-1600.jpg 1600w, /photos/getting-ready-2400.jpg 2400w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)"
-      width="1600" height="800" alt="A pilot boat speeds out to a loaded freighter on the Columbia River." fetchpriority="high">
-  </picture>
-  <figcaption><em>Getting Ready</em> · photograph by <a href="https://www.johnchouser.com/">John C. Houser</a></figcaption>
-</figure>
 <div class="hero">
-  <div class="wrap">
-    <h1>Practical AI help for organizations that have to get it right.</h1>
-    <p class="sub">Training, adoption standards, and software development for public agencies and
-      small businesses in Astoria, Clatsop County, and the Pacific Northwest.</p>
-    <p class="sub">Decades of writing software by hand, and now the tools to do more of it for
-      less. In the past year: more than ten applications, most of them first written by hand and
-      then rebuilt or extended with AI help, plus a production web app with AI at its core, a
-      security tool that checks Linux servers for break-ins, and two games. The games were for us.
-      AI-assisted work runs under a written process that keeps a person in control.</p>
-    <p class="sub">John Houser does the work himself, after 37 years in library and public-sector
-      systems. <a href="/about/">More about John</a>.</p>
-    <div class="actions">
-      <a class="btn btn-primary" href="/contact/">Book a conversation</a>
-      <a class="btn btn-secondary" href="/training/">See the training</a>
+  <div class="wrap hero-grid">
+    <figure class="banner">
+      <picture>
+        <source type="image/webp" srcset="/photos/getting-ready-800.webp 800w, /photos/getting-ready-1600.webp 1600w, /photos/getting-ready-2400.webp 2400w" sizes="(min-width: 60rem) 71rem, calc(100vw - 2rem)">
+        <img src="/photos/getting-ready-1600.jpg" srcset="/photos/getting-ready-800.jpg 800w, /photos/getting-ready-1600.jpg 1600w, /photos/getting-ready-2400.jpg 2400w" sizes="(min-width: 60rem) 71rem, calc(100vw - 2rem)"
+          width="1600" height="800" alt="A pilot boat speeds out to a loaded freighter on the Columbia River." fetchpriority="high">
+      </picture>
+      <figcaption><em>Getting Ready</em> · photograph by <a href="https://www.johnchouser.com/">John C. Houser</a></figcaption>
+    </figure>
+    <div class="hero-lead">
+      <h1>Practical AI help for organizations that have to get it right.</h1>
+      <p class="sub">Training, adoption standards, and software development for public agencies and
+        small businesses in Astoria, Clatsop County, and the Pacific Northwest.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="/contact/">Book a conversation</a>
+        <a class="btn btn-secondary" href="/training/">See the training</a>
+      </div>
+    </div>
+    <div class="hero-more">
+      <p class="sub">Decades of writing software by hand, and now the tools to do more of it for
+        less. In the past year: more than ten applications, most of them first written by hand and
+        then rebuilt or extended with AI help, plus a production web application with AI at its core, a
+        security tool that checks Linux servers for break-ins, and two games. The games were for us.
+        AI-assisted work runs under a written process that keeps a person in control.</p>
+      <p class="sub">John Houser does the work himself, with 37 years of development experience to back him up. <a href="/about/">More about John</a>.</p>
     </div>
   </div>
 </div>
@@ -154,95 +158,106 @@
 <section aria-labelledby="what-h">
   <div class="wrap">
     <h2 id="what-h">What we do</h2>
-    <ul class="icon-list">
-      <li><svg class="icon" width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 43l3-27h8l3 27z"/><path d="M15 16h18"/><path d="M19 16v-6h10v6"/><path d="M21 10l3-4 3 4"/><path d="M33 9l8-3M33 13h9M15 9L7 6M15 13H6"/><path d="M10 43h28"/><path d="M18.9 26h10.2M18 35h12"/></svg><span><strong>Help your staff use AI tools well.</strong> A short session and a one-page
-        standard your team can adopt when you're ready.</span></li>
-      <li><svg class="icon" width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="18"/><path d="M24 10l4.5 14L24 38l-4.5-14z"/><path d="M19.5 24h9"/><path d="M24 2v4M24 42v4M2 24h4M42 24h4"/></svg><span><strong>Plan AI work that fits your budget and your data.</strong> The right model for
-        each job, chosen for cost and for where your data may go.</span></li>
-      <li><svg class="icon" width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="13"/><circle cx="24" cy="24" r="3"/><path d="M27.0 24.0L43.0 24.0"/><circle cx="44.5" cy="24.0" r="1.5"/><path d="M26.1 26.1L37.4 37.4"/><circle cx="38.5" cy="38.5" r="1.5"/><path d="M24.0 27.0L24.0 43.0"/><circle cx="24.0" cy="44.5" r="1.5"/><path d="M21.9 26.1L10.6 37.4"/><circle cx="9.5" cy="38.5" r="1.5"/><path d="M21.0 24.0L5.0 24.0"/><circle cx="3.5" cy="24.0" r="1.5"/><path d="M21.9 21.9L10.6 10.6"/><circle cx="9.5" cy="9.5" r="1.5"/><path d="M24.0 21.0L24.0 5.0"/><circle cx="24.0" cy="3.5" r="1.5"/><path d="M26.1 21.9L37.4 10.6"/><circle cx="38.5" cy="9.5" r="1.5"/></svg><span><strong>Give your developers gates, not guesswork.</strong> A written process for
-        AI-assisted coding, and a starter kit of skills your team keeps.</span></li>
-      <li><svg class="icon" width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="24" cy="8" r="3.5"/><path d="M24 11.5V43"/><path d="M16 18h16"/><path d="M8 29c1.5 8 8 14 16 14s14.5-6 16-14"/><path d="M4 32l4-4 4 4M36 32l4-4 4 4"/></svg><span><strong>Retire the technical debt you've been living with.</strong> Old systems rebuilt
-        and documented by an experienced developer, at a cost that finally fits the budget.</span></li>
-      <li><svg class="icon" width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 34l4-22h6l4 22z"/><path d="M12 34h24l-4 6H16z"/><path d="M21 12V8h6v4"/><path d="M24 8V3"/><path d="M18.9 23h10.2"/><path d="M3 45c3.5-2.5 7-2.5 10.5 0s7 2.5 10.5 0 7-2.5 10.5 0 7 2.5 10.5 0"/></svg><span><strong>Make the next vulnerability a routine update, not an emergency.</strong>
-        Vulnerabilities in the applications you already run, found and fixed, with automated
-        checks that warn you when a new one appears.</span></li>
+    <ul class="cards">
+      <li><svg class="icon" width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 43l3-27h8l3 27z"/><path d="M15 16h18"/><path d="M19 16v-6h10v6"/><path d="M21 10l3-4 3 4"/><path d="M33 9l8-3M33 13h9M15 9L7 6M15 13H6"/><path d="M10 43h28"/><path d="M18.9 26h10.2M18 35h12"/></svg><a class="card-link" href="/services/#staff-h">Help your staff use AI tools well.</a>
+        <p>A short session and a one-page
+        standard your team can adopt when you're ready.</p></li>
+      <li><svg class="icon" width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="18"/><path d="M24 10l4.5 14L24 38l-4.5-14z"/><path d="M19.5 24h9"/><path d="M24 2v4M24 42v4M2 24h4M42 24h4"/></svg><a class="card-link" href="/services/#plan-h">Plan AI work that fits your budget and your data.</a>
+        <p>The right model for
+        each job, chosen for cost and for where your data may go.</p></li>
+      <li><svg class="icon" width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="13"/><circle cx="24" cy="24" r="3"/><path d="M27.0 24.0L43.0 24.0"/><circle cx="44.5" cy="24.0" r="1.5"/><path d="M26.1 26.1L37.4 37.4"/><circle cx="38.5" cy="38.5" r="1.5"/><path d="M24.0 27.0L24.0 43.0"/><circle cx="24.0" cy="44.5" r="1.5"/><path d="M21.9 26.1L10.6 37.4"/><circle cx="9.5" cy="38.5" r="1.5"/><path d="M21.0 24.0L5.0 24.0"/><circle cx="3.5" cy="24.0" r="1.5"/><path d="M21.9 21.9L10.6 10.6"/><circle cx="9.5" cy="9.5" r="1.5"/><path d="M24.0 21.0L24.0 5.0"/><circle cx="24.0" cy="3.5" r="1.5"/><path d="M26.1 21.9L37.4 10.6"/><circle cx="38.5" cy="9.5" r="1.5"/></svg><a class="card-link" href="/services/#dev-h">Give your developers gates, not guesswork.</a>
+        <p>A written process for
+        AI-assisted coding, and a starter kit of skills your team keeps.</p></li>
+      <li><svg class="icon" width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="24" cy="8" r="3.5"/><path d="M24 11.5V43"/><path d="M16 18h16"/><path d="M8 29c1.5 8 8 14 16 14s14.5-6 16-14"/><path d="M4 32l4-4 4 4M36 32l4-4 4 4"/></svg><a class="card-link" href="/services/#debt-h">Retire the technical debt you've been living with.</a>
+        <p>Old systems rebuilt
+        and documented by an experienced developer, at a cost that finally fits the budget.</p></li>
+      <li><svg class="icon" width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 34l4-22h6l4 22z"/><path d="M12 34h24l-4 6H16z"/><path d="M21 12V8h6v4"/><path d="M24 8V3"/><path d="M18.9 23h10.2"/><path d="M3 45c3.5-2.5 7-2.5 10.5 0s7 2.5 10.5 0 7-2.5 10.5 0 7 2.5 10.5 0"/></svg><a class="card-link" href="/services/#sec-h">Make the next vulnerability a routine update, not an emergency.</a>
+        <p>Vulnerabilities in the applications you already run, found and fixed, with automated
+        checks that warn you when a new one appears.</p></li>
+      <li class="card-more"><a class="card-link" href="/services/">More about what we do</a></li>
     </ul>
-    <p><a href="/services/">More about what we do</a></p>
   </div>
 </section>
 
 <section aria-labelledby="checker-h">
   <div class="wrap">
-    <h2 id="checker-h">Compromise Checker: security in plain words</h2>
+    <div class="split">
+      <div class="split-text">
+    <h2 id="checker-h">Compromise Checker: Clear Results to Act On</h2>
     <p>A tool that checks Linux servers for signs of a break-in. It answers one question: has
       this server been broken into? It isn't a vulnerability scanner or a patching tool. It
       logs in over SSH, runs a read-only collector, and brings the evidence back to your own machine. The tool writes
-      nothing to the server. Each server gets an estimated chance of a break-in, in plain words,
-      with the evidence behind every finding and what to do about it. It's built for small
+      nothing to the server. Each server gets an estimated chance of a break-in, with the evidence behind every finding and what to do about it. It's built for small
       organizations that can't afford commercial security products, and it shows how we handle
       AI in sensitive work: the optional AI advisor explains results and suggests next steps but
       never acts. Names and addresses are replaced by default before anything is sent, and a
       model on your own machine is an option. Open source under AGPL. Pre-release 0.1.2 is out:
       <a href="/work/compromise-checker/install/">how to install it</a>.</p>
+    <p><a href="/work/#checker-h">More about the checker</a> · <a href="https://github.com/john-c-houser-tech/compromise-checker">Source on GitHub</a> · <a href="https://www.linkedin.com/pulse/php-incident-inspired-me-john-c-houser-qjb8c">Why John built it (LinkedIn)</a></p>
+      </div>
+      <div class="split-media">
     <figure class="shot">
       <a href="/screens/cc-fleet-2280.jpg">
       <picture>
-        <source type="image/webp" srcset="/screens/cc-fleet-800.webp 800w, /screens/cc-fleet-1600.webp 1600w, /screens/cc-fleet-2280.webp 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)">
-        <img src="/screens/cc-fleet-800.jpg" srcset="/screens/cc-fleet-800.jpg 800w, /screens/cc-fleet-1600.jpg 1600w, /screens/cc-fleet-2280.jpg 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)"
+        <source type="image/webp" srcset="/screens/cc-fleet-800.webp 800w, /screens/cc-fleet-1600.webp 1600w, /screens/cc-fleet-2280.webp 2280w" sizes="(min-width: 60rem) 28rem, calc(100vw - 2rem)">
+        <img src="/screens/cc-fleet-800.jpg" srcset="/screens/cc-fleet-800.jpg 800w, /screens/cc-fleet-1600.jpg 1600w, /screens/cc-fleet-2280.jpg 2280w" sizes="(min-width: 60rem) 28rem, calc(100vw - 2rem)"
           width="1600" height="2627" alt="Compromise Checker's server list: a red Act on this now badge, the headline 2 of your 6 servers need attention now, counts by band, filters, and the first server, shop-web-1, with strong signs of a break-in, what's new since the last check, and a 100% chance of a break-in." loading="lazy">
       </picture>
       </a>
-      <figcaption>Your servers, in the order to deal with them: one plain answer at the top, then each server with what's new since the last check and its chance of a break-in.</figcaption>
+      <figcaption>Your servers, in the order to deal with them: one answer at the top, then each server with what's new since the last check and its chance of a break-in.</figcaption>
     </figure>
     <p class="note">From a demo fleet of throwaway servers, attacked on purpose. Real results; addresses replaced.</p>
-    <p><a href="/work/#checker-h">More about the checker</a> · <a href="https://github.com/john-c-houser-tech/compromise-checker">Source on GitHub</a> · <a href="https://www.linkedin.com/pulse/php-incident-inspired-me-john-c-houser-qjb8c">Why John built it (LinkedIn)</a></p>
+      </div>
+    </div>
   </div>
 </section>
 
 <section aria-labelledby="nouriloop-h">
   <div class="wrap">
-    <h2 id="nouriloop-h">NouriLoop: AI built in from the ground up</h2>
-    <p>A nutrition-tracking web app designed around AI from its first line of code, not one
-      with a chatbot added later. AI reads meals from photos, turns a goal described in plain
-      words into a measurable one, and explains glucose responses. A person reviews every
-      estimate before it's saved. Underneath, cost stays a choice: the app runs on Anthropic, on
+    <div class="split flip">
+      <div class="split-text">
+    <h2 id="nouriloop-h">NouriLoop: AI designed in from the start</h2>
+    <p>A nutrition-tracking web application. AI reads meals from photos, turns a goal described in your own words into a measurable one, and explains glucose responses. A person reviews every
+      estimate before it's saved. Underneath, cost stays a choice: the application runs on Anthropic, on
       any of the models available through OpenRouter, or on your own Ollama server; simple tasks
       go to smaller models automatically; and every AI call is metered, so the cost of each
       feature is known, not guessed. We design client systems the same way. No organization
       should be locked into one AI vendor's prices.</p>
+    <p>It was built mostly with AI coding agents, with every step planned, directed and reviewed
+      by a person. That's the process our developer course teaches. Open source under AGPL, and
+      live at app.nouriloop.com.</p>
+    <p><a href="https://app.nouriloop.com/">Try it</a> · <a href="https://github.com/john-c-houser-tech/nouriloop-app">Source on GitHub</a></p>
+      </div>
+      <div class="split-media">
     <figure class="shot">
       <a href="/screens/ai-provider-2280.jpg">
       <picture>
-        <source type="image/webp" srcset="/screens/ai-provider-800.webp 800w, /screens/ai-provider-1600.webp 1600w, /screens/ai-provider-2280.webp 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)">
-        <img src="/screens/ai-provider-800.jpg" srcset="/screens/ai-provider-800.jpg 800w, /screens/ai-provider-1600.jpg 1600w, /screens/ai-provider-2280.jpg 2280w" sizes="(min-width: 40rem) 38rem, calc(100vw - 2rem)"
+        <source type="image/webp" srcset="/screens/ai-provider-800.webp 800w, /screens/ai-provider-1600.webp 1600w, /screens/ai-provider-2280.webp 2280w" sizes="(min-width: 60rem) 34rem, calc(100vw - 2rem)">
+        <img src="/screens/ai-provider-800.jpg" srcset="/screens/ai-provider-800.jpg 800w, /screens/ai-provider-1600.jpg 1600w, /screens/ai-provider-2280.jpg 2280w" sizes="(min-width: 60rem) 34rem, calc(100vw - 2rem)"
           width="1600" height="1289" alt="NouriLoop's AI provider settings, offering NouriLoop's AI, the user's own Anthropic key, an OpenRouter key, or another service with an OpenAI-style API." loading="lazy">
       </picture>
       </a>
       <figcaption>Choosing the AI: NouriLoop's own, your Anthropic or OpenRouter key, or any service with an OpenAI-style API.</figcaption>
     </figure>
-    <p>It was built mostly with AI coding agents, with every step planned, directed and reviewed
-      by a person. That's the process our developer course teaches. Open source under AGPL, and
-      live at app.nouriloop.com.</p>
-    <p><a href="https://app.nouriloop.com/">Try it</a> · <a href="https://github.com/john-c-houser-tech/nouriloop-app">Source on GitHub</a></p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section aria-labelledby="more-h">
-  <div class="wrap">
+<div class="wrap pair">
+<section class="panel" aria-labelledby="more-h">
     <h2 id="more-h">More work</h2>
     <p>Two browser games, Cranky Coop and Quiet Solitaire, each built with the same review
       process. Plus open-source library software, in production at Oregon library systems.</p>
     <p><a href="/work/">See the work</a></p>
-  </div>
 </section>
 
-<section aria-labelledby="start-h">
-  <div class="wrap">
+<section class="panel panel-cta" aria-labelledby="start-h">
     <h2 id="start-h">Start with a conversation</h2>
     <p>Tell us what you're trying to do, and we'll tell you whether we can help.</p>
     <p><a class="btn btn-primary" href="/contact/">Book a conversation</a></p>
-  </div>
 </section>
+</div>
 </main>
 
 <footer>
